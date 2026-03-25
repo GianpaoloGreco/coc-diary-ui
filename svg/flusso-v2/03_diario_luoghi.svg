@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="oldParchment" patternUnits="userSpaceOnUse" width="200" height="200">
+      <rect width="200" height="200" fill="#D4C4A8"/>
+      <circle cx="30" cy="50" r="15" fill="#C4B498" opacity="0.4"/>
+      <circle cx="150" cy="120" r="20" fill="#B4A488" opacity="0.3"/>
+      <line x1="0" y1="20" x2="200" y2="22" stroke="#C4B498" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <pattern id="leatherTexture" patternUnits="userSpaceOnUse" width="50" height="50">
+      <rect width="50" height="50" fill="#3D2914"/>
+      <circle cx="10" cy="10" r="2" fill="#2a1f14" opacity="0.3"/>
+    </pattern>
+    <filter id="paperShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#0a0806"/>
+
+  <g id="openBook" filter="url(#paperShadow)">
+    <rect x="180" y="50" width="1560" height="980" fill="#3D2914" rx="8"/>
+    <rect x="940" y="50" width="40" height="980" fill="#2a1f14"/>
+
+    <!-- ========== PAGINA SINISTRA - MAPPA DISEGNATA A MANO ========== -->
+    <g id="leftPage">
+      <path d="M200,70 Q210,65 220,70 L920,70 L925,1010 Q915,1015 905,1010 L220,1015 Q210,1020 200,1010 Z"
+            fill="#D4C4A8"/>
+      <path d="M200,70 L200,1010" stroke="#8B7355" stroke-width="3" opacity="0.4"/>
+
+      <!-- Titolo -->
+      <text x="560" y="100" font-family="Georgia, serif" font-size="26" fill="#2a1f14" text-anchor="middle" font-style="italic">Luoghi Visitati - Kabar</text>
+      <path d="M320,115 Q560,122 800,115" fill="none" stroke="#6a5a4a" stroke-width="1" opacity="0.5"/>
+
+      <!-- MAPPA DISEGNATA A MANO -->
+      <g transform="translate(230, 140)">
+        <!-- Bordo mappa irregolare -->
+        <path d="M10,5 Q5,10 8,20 L5,680 Q10,690 20,688 L650,692 Q660,688 658,680 L662,20 Q658,8 650,5 Z"
+              fill="#E5D9C3" stroke="#5a4a3a" stroke-width="2"/>
+
+        <!-- Strade/percorsi disegnati a mano -->
+        <path d="M100,600 Q200,500 180,400 Q160,300 250,250 Q340,200 400,180 Q500,150 580,200"
+              fill="none" stroke="#6a5a4a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M250,250 Q350,280 450,350" fill="none" stroke="#7a6a5a" stroke-width="2" stroke-dasharray="8,4"/>
+
+        <!-- Location 1: Piazza centrale -->
+        <g transform="translate(80, 550)">
+          <ellipse cx="30" cy="25" rx="40" ry="30" fill="none" stroke="#2a1f14" stroke-width="2"/>
+          <text x="30" y="30" font-family="Georgia, serif" font-size="11" fill="#2a1f14" text-anchor="middle">Piazza</text>
+          <!-- X per "visitato" -->
+          <text x="80" y="15" font-family="Georgia, serif" font-size="16" fill="#228B22">&#10003;</text>
+        </g>
+
+        <!-- Location 2: Bazar -->
+        <g transform="translate(140, 360)">
+          <rect x="0" y="0" width="80" height="50" fill="none" stroke="#2a1f14" stroke-width="2" rx="5" transform="rotate(-5)"/>
+          <text x="40" y="30" font-family="Georgia, serif" font-size="11" fill="#2a1f14" text-anchor="middle" transform="rotate(-5)">Bazar</text>
+          <text x="90" y="15" font-family="Georgia, serif" font-size="16" fill="#228B22">&#10003;</text>
+        </g>
+
+        <!-- Location 3: Biblioteca (attuale - evidenziata) -->
+        <g transform="translate(360, 130)">
+          <rect x="0" y="0" width="100" height="70" fill="none" stroke="#8B0000" stroke-width="3" rx="3"/>
+          <text x="50" y="30" font-family="Georgia, serif" font-size="12" fill="#8B0000" text-anchor="middle" font-weight="bold">Grande</text>
+          <text x="50" y="48" font-family="Georgia, serif" font-size="12" fill="#8B0000" text-anchor="middle" font-weight="bold">Biblioteca</text>
+          <!-- Indicatore posizione -->
+          <circle cx="50" cy="-15" r="8" fill="#8B0000"/>
+          <text x="50" y="-10" font-family="Georgia, serif" font-size="10" fill="#fff" text-anchor="middle">!</text>
+        </g>
+
+        <!-- Location 4: Catacombe (non ancora visitata - tratteggiata) -->
+        <g transform="translate(500, 200)">
+          <ellipse cx="40" cy="30" rx="50" ry="35" fill="none" stroke="#6a5a4a" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="40" y="35" font-family="Georgia, serif" font-size="11" fill="#6a5a4a" text-anchor="middle" font-style="italic">Catacombe?</text>
+          <text x="40" y="80" font-family="Georgia, serif" font-size="10" fill="#7a6a5a" text-anchor="middle">↓ sotto</text>
+        </g>
+
+        <!-- Rosa dei venti disegnata a mano -->
+        <g transform="translate(580, 580)">
+          <circle cx="0" cy="0" r="40" fill="none" stroke="#5a4a3a" stroke-width="1.5"/>
+          <path d="M0,-35 L5,0 L0,35 L-5,0 Z" fill="#5a4a3a"/>
+          <path d="M-35,0 L0,-5 L35,0 L0,5 Z" fill="#8a7a6a"/>
+          <text x="0" y="-45" font-family="Georgia, serif" font-size="12" fill="#4a3a2a" text-anchor="middle">N</text>
+          <text x="50" y="5" font-family="Georgia, serif" font-size="10" fill="#5a4a3a" text-anchor="middle">E</text>
+          <text x="0" y="55" font-family="Georgia, serif" font-size="10" fill="#5a4a3a" text-anchor="middle">S</text>
+          <text x="-50" y="5" font-family="Georgia, serif" font-size="10" fill="#5a4a3a" text-anchor="middle">O</text>
+        </g>
+
+        <!-- Annotazioni sulla mappa -->
+        <text x="30" y="300" font-family="Georgia, serif" font-size="10" fill="#6a5a4a" font-style="italic" transform="rotate(-10)">↑ al porto</text>
+        <text x="550" y="400" font-family="Georgia, serif" font-size="10" fill="#6a5a4a" font-style="italic" transform="rotate(15)">deserto →</text>
+      </g>
+
+      <!-- Legenda semplice -->
+      <g transform="translate(250, 870)">
+        <text font-family="Georgia, serif" font-size="12" fill="#5a4a3a" font-style="italic">
+          <tspan x="0" fill="#228B22">&#10003;</tspan><tspan dx="10">visitato</tspan>
+          <tspan dx="30" fill="#8B0000">!</tspan><tspan dx="10">posizione attuale</tspan>
+          <tspan dx="30">- - -</tspan><tspan dx="10">da esplorare</tspan>
+        </text>
+      </g>
+
+      <text x="560" y="990" font-family="Georgia, serif" font-size="14" fill="#6a5a4a" text-anchor="middle">- 28 -</text>
+    </g>
+
+    <!-- ========== PAGINA DESTRA - NOTE SUI LUOGHI ========== -->
+    <g id="rightPage">
+      <path d="M1000,70 L1700,70 Q1710,75 1720,70 L1720,1010 Q1710,1015 1700,1010 L1000,1015 Z"
+            fill="#D4C4A8"/>
+      <path d="M1720,70 L1720,1010" stroke="#8B7355" stroke-width="3" opacity="0.4"/>
+
+      <!-- LA GRANDE BIBLIOTECA - descrizione -->
+      <g transform="translate(1040, 100)">
+        <text x="300" y="30" font-family="Georgia, serif" font-size="24" fill="#2a1f14" text-anchor="middle" font-style="italic">La Grande Biblioteca</text>
+        <path d="M100,45 Q300,52 500,45" fill="none" stroke="#6a5a4a" stroke-width="1"/>
+
+        <text font-family="Georgia, serif" font-size="16" fill="#3a2a1a" font-style="italic">
+          <tspan x="0" y="90">Un edificio magnifico che custodisce</tspan>
+          <tspan x="0" dy="28">millenni di sapere. I suoi scaffali</tspan>
+          <tspan x="0" dy="28">nascondono segreti che alcuni</tspan>
+          <tspan x="0" dy="28">preferirebbero rimanessero sepolti.</tspan>
+        </text>
+
+        <!-- Schizzo piccolo dell'edificio -->
+        <g transform="translate(420, 70)">
+          <rect x="0" y="30" width="120" height="80" fill="none" stroke="#4a3a2a" stroke-width="1.5"/>
+          <path d="M0,30 L60,0 L120,30" fill="none" stroke="#4a3a2a" stroke-width="1.5"/>
+          <rect x="45" y="60" width="30" height="50" fill="none" stroke="#4a3a2a" stroke-width="1"/>
+          <text x="60" y="130" font-family="Georgia, serif" font-size="9" fill="#5a4a3a" text-anchor="middle" font-style="italic">schizzo</text>
+        </g>
+      </g>
+
+      <!-- Separatore -->
+      <path d="M1060,320 Q1360,315 1680,322" fill="none" stroke="#8a7a6a" stroke-width="1" stroke-dasharray="10,5"/>
+
+      <!-- IL BAZAR -->
+      <g transform="translate(1040, 350)">
+        <text x="0" y="0" font-family="Georgia, serif" font-size="20" fill="#2a1f14" font-style="italic">Il Grande Bazar</text>
+
+        <text font-family="Georgia, serif" font-size="15" fill="#4a3a2a" font-style="italic">
+          <tspan x="0" y="35">Un labirinto di bancarelle e</tspan>
+          <tspan x="0" dy="24">odori speziati. Qui si può</tspan>
+          <tspan x="0" dy="24">trovare qualsiasi cosa... per</tspan>
+          <tspan x="0" dy="24">il giusto prezzo.</tspan>
+        </text>
+
+        <!-- Nota a margine -->
+        <text x="450" y="60" font-family="Georgia, serif" font-size="12" fill="#6a5a4a" font-style="italic" transform="rotate(3)">
+          <tspan x="450" dy="0">Il mercante</tspan>
+          <tspan x="450" dy="15">sta qui</tspan>
+        </text>
+      </g>
+
+      <!-- Separatore -->
+      <path d="M1060,530 Q1360,525 1680,532" fill="none" stroke="#8a7a6a" stroke-width="1" stroke-dasharray="10,5"/>
+
+      <!-- LA PIAZZA -->
+      <g transform="translate(1040, 560)">
+        <text x="0" y="0" font-family="Georgia, serif" font-size="20" fill="#2a1f14" font-style="italic">Piazza Centrale</text>
+
+        <text font-family="Georgia, serif" font-size="15" fill="#4a3a2a" font-style="italic">
+          <tspan x="0" y="35">Il cuore pulsante di Kabar.</tspan>
+          <tspan x="0" dy="24">Qui la gente si riunisce,</tspan>
+          <tspan x="0" dy="24">commercia, sussurra.</tspan>
+        </text>
+      </g>
+
+      <!-- Separatore -->
+      <path d="M1060,700 Q1360,695 1680,702" fill="none" stroke="#8a7a6a" stroke-width="1" stroke-dasharray="10,5"/>
+
+      <!-- CATACOMBE (mistero) -->
+      <g transform="translate(1040, 730)">
+        <text x="0" y="0" font-family="Georgia, serif" font-size="18" fill="#6a5a4a" font-style="italic">Le Catacombe (?)</text>
+
+        <text font-family="Georgia, serif" font-size="14" fill="#7a6a5a" font-style="italic">
+          <tspan x="0" y="30">I custodi ne parlano a</tspan>
+          <tspan x="0" dy="22">bassa voce. Dicono che</tspan>
+          <tspan x="0" dy="22">sotto la biblioteca si</tspan>
+          <tspan x="0" dy="22">estenda un altro mondo...</tspan>
+        </text>
+
+        <text x="400" y="50" font-family="Georgia, serif" font-size="24" fill="#5a4a3a" text-anchor="middle">?</text>
+      </g>
+
+      <!-- Freccia ritorno -->
+      <g transform="translate(1080, 920)">
+        <path d="M80,15 L0,15 L10,5 M0,15 L10,25" fill="none" stroke="#4a3a2a" stroke-width="2"/>
+        <text x="100" y="20" font-family="Georgia, serif" font-size="12" fill="#5a4a3a" font-style="italic">alla storia</text>
+      </g>
+
+      <text x="1360" y="990" font-family="Georgia, serif" font-size="14" fill="#6a5a4a" text-anchor="middle">- 29 -</text>
+    </g>
+
+    <!-- SEGNALIBRI -->
+    <g id="bookmarks">
+      <g transform="translate(1740, 200)">
+        <path d="M0,0 L60,0 L60,80 L30,60 L0,80 Z" fill="#8B4513" stroke="#5C3310" stroke-width="1"/>
+        <text x="30" y="35" font-family="Georgia, serif" font-size="10" fill="#E8DCC8" text-anchor="middle" transform="rotate(90, 30, 35)">Anime</text>
+      </g>
+      <!-- Luoghi (attivo) -->
+      <g transform="translate(1740, 350)">
+        <path d="M0,0 L70,0 L70,90 L35,70 L0,90 Z" fill="#2F4F4F" stroke="#DAA520" stroke-width="2"/>
+        <text x="35" y="40" font-family="Georgia, serif" font-size="11" fill="#E8DCC8" text-anchor="middle" transform="rotate(90, 35, 40)">Luoghi</text>
+      </g>
+      <g transform="translate(1740, 500)">
+        <path d="M0,0 L60,0 L60,80 L30,60 L0,80 Z" fill="#4B0082" stroke="#3B0062" stroke-width="1"/>
+        <text x="30" y="35" font-family="Georgia, serif" font-size="10" fill="#E8DCC8" text-anchor="middle" transform="rotate(90, 30, 35)">Indizi</text>
+      </g>
+    </g>
+
+    <!-- Indice capitoli -->
+    <g transform="translate(200, 30)">
+      <text font-family="Georgia, serif" font-size="11" fill="#6a5a4a">
+        <tspan x="0">I</tspan><tspan x="30">II</tspan><tspan x="60" font-weight="bold" fill="#2a1f14">III</tspan><tspan x="95" fill="#9a8a7a">IV</tspan><tspan x="125" fill="#9a8a7a">V</tspan>
+      </text>
+    </g>
+
+    <!-- Chiusura -->
+    <g transform="translate(1700, 50)" style="cursor: pointer;">
+      <circle cx="0" cy="0" r="18" fill="#3D2914" stroke="#5C4033" stroke-width="1" opacity="0.8"/>
+      <line x1="-7" y1="-7" x2="7" y2="7" stroke="#8B7355" stroke-width="2"/>
+      <line x1="7" y1="-7" x2="-7" y2="7" stroke="#8B7355" stroke-width="2"/>
+    </g>
+  </g>
+
+</svg>

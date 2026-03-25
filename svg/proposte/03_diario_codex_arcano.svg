@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Gradiente sfondo codex -->
+    <linearGradient id="codexBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f1a"/>
+    </linearGradient>
+
+    <!-- Gradiente sidebar -->
+    <linearGradient id="sidebarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2a1f14"/>
+      <stop offset="100%" style="stop-color:#3D2914"/>
+    </linearGradient>
+
+    <!-- Gradiente viola cosmico -->
+    <linearGradient id="cosmicPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B0082"/>
+      <stop offset="50%" style="stop-color:#2E0854"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Ombra interna -->
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA type="table" tableValues="1 0"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="5"/>
+      <feOffset dx="3" dy="3" result="offsetblur"/>
+      <feFlood flood-color="#000" result="color"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode/>
+      </feMerge>
+    </filter>
+
+    <!-- Pattern rune -->
+    <pattern id="runePattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="transparent"/>
+      <text x="30" y="35" font-family="Georgia, serif" font-size="20" fill="#2E0854" text-anchor="middle" opacity="0.15">&#x2625;</text>
+    </pattern>
+  </defs>
+
+  <!-- SFONDO GIOCO -->
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+  <rect width="1920" height="1080" fill="#000" opacity="0.7"/>
+
+  <!-- ========== BARRA SUPERIORE ========== -->
+  <rect x="0" y="0" width="1920" height="60" fill="#2a1f14" stroke="#5C4033" stroke-width="2"/>
+
+  <!-- Inventario -->
+  <g id="inventorySlots3">
+    <rect x="20" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    <rect x="70" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    <rect x="120" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    <rect x="170" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    <rect x="220" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    <rect x="270" y="8" width="44" height="44" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+  </g>
+
+  <!-- PULSANTE DIARIO (stile arcano) -->
+  <g id="diaryButton3" transform="translate(340, 8)">
+    <rect width="100" height="44" fill="#2E0854" stroke="#9370DB" stroke-width="2" rx="5"/>
+    <!-- Icona occhio cosmico -->
+    <ellipse cx="25" cy="22" rx="12" ry="8" fill="none" stroke="#9370DB" stroke-width="2"/>
+    <circle cx="25" cy="22" r="4" fill="#9370DB"/>
+    <text x="60" y="28" font-family="Georgia, serif" font-size="11" fill="#DDA0DD" font-weight="bold">CODEX</text>
+  </g>
+
+  <!-- ========== CODEX ARCANO ========== -->
+  <g id="codexArcane">
+
+    <!-- Sfondo principale codex -->
+    <rect x="150" y="80" width="1620" height="920" fill="url(#codexBg)" stroke="#4B0082" stroke-width="3" rx="10"/>
+    <rect x="150" y="80" width="1620" height="920" fill="url(#runePattern)" rx="10"/>
+
+    <!-- ========== SIDEBAR SINISTRA (Capitoli) ========== -->
+    <rect x="150" y="80" width="280" height="920" fill="url(#sidebarGradient)" rx="10"/>
+    <rect x="420" y="80" width="10" height="920" fill="#1a1208"/>
+
+    <!-- Titolo sidebar -->
+    <text x="290" y="130" font-family="Georgia, serif" font-size="20" fill="#DAA520" text-anchor="middle" font-weight="bold">CAPITOLI</text>
+    <line x1="170" y1="150" x2="410" y2="150" stroke="#5C4033" stroke-width="2"/>
+
+    <!-- Lista capitoli -->
+    <g id="chapterList">
+      <!-- Capitolo I -->
+      <g transform="translate(160, 170)" style="cursor: pointer;">
+        <rect x="0" y="0" width="240" height="60" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/>
+        <text x="20" y="25" font-family="Georgia, serif" font-size="14" fill="#DAA520" font-weight="bold">I. L'Arrivo</text>
+        <text x="20" y="45" font-family="Georgia, serif" font-size="11" fill="#8B7355">Kabar, la città del deserto</text>
+        <circle cx="220" cy="30" r="8" fill="#228B22"/>
+        <text x="220" y="34" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">&#10003;</text>
+      </g>
+
+      <!-- Capitolo II -->
+      <g transform="translate(160, 240)" style="cursor: pointer;">
+        <rect x="0" y="0" width="240" height="60" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/>
+        <text x="20" y="25" font-family="Georgia, serif" font-size="14" fill="#DAA520" font-weight="bold">II. Il Mercato</text>
+        <text x="20" y="45" font-family="Georgia, serif" font-size="11" fill="#8B7355">Segreti nel bazar</text>
+        <circle cx="220" cy="30" r="8" fill="#228B22"/>
+        <text x="220" y="34" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle">&#10003;</text>
+      </g>
+
+      <!-- Capitolo III (attivo) -->
+      <g transform="translate(160, 310)" style="cursor: pointer;">
+        <rect x="0" y="0" width="240" height="70" fill="#4B0082" stroke="#9370DB" stroke-width="2" rx="5" filter="url(#glow)"/>
+        <text x="20" y="28" font-family="Georgia, serif" font-size="15" fill="#E8DCC8" font-weight="bold">III. La Biblioteca</text>
+        <text x="20" y="50" font-family="Georgia, serif" font-size="12" fill="#DDA0DD">Atene, la Grande Biblioteca</text>
+        <circle cx="220" cy="35" r="10" fill="#DAA520" stroke="#FFD700" stroke-width="2"/>
+        <text x="220" y="40" font-family="Arial" font-size="12" fill="#3D2914" text-anchor="middle" font-weight="bold">3</text>
+      </g>
+
+      <!-- Capitolo IV (bloccato) -->
+      <g transform="translate(160, 390)" style="cursor: pointer;" opacity="0.5">
+        <rect x="0" y="0" width="240" height="60" fill="#2a1f14" stroke="#3D2914" stroke-width="1" rx="5"/>
+        <text x="20" y="25" font-family="Georgia, serif" font-size="14" fill="#5C4033" font-weight="bold">IV. Le Catacombe</text>
+        <text x="20" y="45" font-family="Georgia, serif" font-size="11" fill="#3D2914">??? </text>
+        <!-- Lucchetto -->
+        <rect x="212" y="22" width="16" height="12" fill="none" stroke="#5C4033" stroke-width="2" rx="2"/>
+        <path d="M216,22 L216,18 Q220,12 224,18 L224,22" fill="none" stroke="#5C4033" stroke-width="2"/>
+      </g>
+
+      <!-- Capitolo V (bloccato) -->
+      <g transform="translate(160, 460)" style="cursor: pointer;" opacity="0.5">
+        <rect x="0" y="0" width="240" height="60" fill="#2a1f14" stroke="#3D2914" stroke-width="1" rx="5"/>
+        <text x="20" y="25" font-family="Georgia, serif" font-size="14" fill="#5C4033" font-weight="bold">V. La Rivelazione</text>
+        <text x="20" y="45" font-family="Georgia, serif" font-size="11" fill="#3D2914">???</text>
+        <rect x="212" y="22" width="16" height="12" fill="none" stroke="#5C4033" stroke-width="2" rx="2"/>
+        <path d="M216,22 L216,18 Q220,12 224,18 L224,22" fill="none" stroke="#5C4033" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- Progressione -->
+    <g transform="translate(160, 550)">
+      <text x="120" y="20" font-family="Georgia, serif" font-size="12" fill="#8B7355" text-anchor="middle">PROGRESSO</text>
+      <rect x="20" y="35" width="200" height="10" fill="#2a1f14" stroke="#5C4033" stroke-width="1" rx="5"/>
+      <rect x="20" y="35" width="120" height="10" fill="#DAA520" rx="5"/>
+      <text x="120" y="65" font-family="Georgia, serif" font-size="11" fill="#DAA520" text-anchor="middle">60% Completato</text>
+    </g>
+
+    <!-- ========== AREA CONTENUTO PRINCIPALE ========== -->
+    <g id="mainContent" transform="translate(450, 100)">
+
+      <!-- Header capitolo -->
+      <text x="560" y="40" font-family="Georgia, serif" font-size="32" fill="#DDA0DD" text-anchor="middle" font-weight="bold">CAPITOLO III</text>
+      <text x="560" y="75" font-family="Georgia, serif" font-size="22" fill="#9370DB" text-anchor="middle" font-style="italic">La Biblioteca di Atene</text>
+
+      <!-- Linea decorativa -->
+      <line x1="200" y1="95" x2="920" y2="95" stroke="#4B0082" stroke-width="2"/>
+      <circle cx="560" cy="95" r="6" fill="#9370DB"/>
+
+      <!-- ========== TAB SEZIONI ========== -->
+      <g id="contentTabs" transform="translate(0, 110)">
+        <!-- Tab Storia (attivo) -->
+        <rect x="0" y="0" width="150" height="45" fill="#4B0082" stroke="#9370DB" stroke-width="2" rx="5"/>
+        <text x="75" y="30" font-family="Georgia, serif" font-size="14" fill="#E8DCC8" text-anchor="middle" font-weight="bold">STORIA</text>
+
+        <!-- Tab Immagini -->
+        <rect x="160" y="0" width="150" height="45" fill="#1a1a2e" stroke="#4B0082" stroke-width="1" rx="5"/>
+        <text x="235" y="30" font-family="Georgia, serif" font-size="14" fill="#9370DB" text-anchor="middle">IMMAGINI</text>
+
+        <!-- Tab Personaggi -->
+        <rect x="320" y="0" width="150" height="45" fill="#1a1a2e" stroke="#4B0082" stroke-width="1" rx="5"/>
+        <text x="395" y="30" font-family="Georgia, serif" font-size="14" fill="#9370DB" text-anchor="middle">PERSONAGGI</text>
+
+        <!-- Tab Luoghi -->
+        <rect x="480" y="0" width="150" height="45" fill="#1a1a2e" stroke="#4B0082" stroke-width="1" rx="5"/>
+        <text x="555" y="30" font-family="Georgia, serif" font-size="14" fill="#9370DB" text-anchor="middle">LUOGHI</text>
+
+        <!-- Tab Lore -->
+        <rect x="640" y="0" width="150" height="45" fill="#1a1a2e" stroke="#4B0082" stroke-width="1" rx="5"/>
+        <text x="715" y="30" font-family="Georgia, serif" font-size="14" fill="#9370DB" text-anchor="middle">ARCANA</text>
+      </g>
+
+      <!-- ========== CONTENUTO TAB STORIA ========== -->
+      <g id="storyContent" transform="translate(0, 170)">
+
+        <!-- Immagine motion comic grande -->
+        <rect x="0" y="0" width="500" height="350" fill="#0f0f1a" stroke="#4B0082" stroke-width="2" rx="5"/>
+        <rect x="10" y="10" width="480" height="330" fill="#1C3A3A"/>
+        <text x="250" y="180" font-family="Georgia, serif" font-size="18" fill="#4B0082" text-anchor="middle" font-style="italic">[Motion Comic]</text>
+        <text x="250" y="210" font-family="Georgia, serif" font-size="14" fill="#2E0854" text-anchor="middle">"La macchina che non dovrebbe esistere"</text>
+
+        <!-- Controlli immagine -->
+        <g transform="translate(0, 360)">
+          <circle cx="230" cy="20" r="15" fill="#2E0854" stroke="#9370DB" stroke-width="1"/>
+          <path d="M225,15 L235,20 L225,25 Z" fill="#DDA0DD"/>
+          <circle cx="270" cy="20" r="15" fill="#2E0854" stroke="#9370DB" stroke-width="1"/>
+          <rect x="264" y="14" width="12" height="12" fill="#DDA0DD" rx="2"/>
+          <text x="250" y="55" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">1 / 4 immagini</text>
+        </g>
+
+        <!-- Testo narrativo -->
+        <g transform="translate(530, 0)">
+          <rect x="0" y="0" width="580" height="450" fill="#0f0f1a" stroke="#4B0082" stroke-width="1" rx="5"/>
+
+          <!-- Scrollable text area -->
+          <foreignObject x="20" y="20" width="540" height="410">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Georgia, serif; font-size: 15px; color: #C4B598; line-height: 1.8;">
+            </div>
+          </foreignObject>
+
+          <!-- Testo simulato -->
+          <text font-family="Georgia, serif" font-size="15" fill="#C4B598">
+            <tspan x="25" y="45">Il viaggio verso Atene fu lungo e pieno di</tspan>
+            <tspan x="25" dy="28">presagi inquietanti. Durante la traversata,</tspan>
+            <tspan x="25" dy="28">i marinai parlavano sottovoce di strane</tspan>
+            <tspan x="25" dy="28">luci viste all'orizzonte nelle notti senza luna.</tspan>
+            <tspan x="25" dy="40" fill="#DDA0DD" font-style="italic">"Qualcosa non va in questo luogo,"</tspan>
+            <tspan x="25" dy="28" fill="#DDA0DD" font-style="italic">mormorò Canus guardandosi intorno.</tspan>
+            <tspan x="25" dy="40">Arrivato finalmente alla Grande Biblioteca,</tspan>
+            <tspan x="25" dy="28">Rabian fu colpito dalla magnificenza degli</tspan>
+            <tspan x="25" dy="28">antichi scaffali. Ma qualcosa non andava.</tspan>
+            <tspan x="25" dy="28">I custodi sembravano nervosi, e certi tomi</tspan>
+            <tspan x="25" dy="28">erano stati rimossi dalle loro postazioni...</tspan>
+          </text>
+
+          <!-- Scrollbar -->
+          <rect x="555" y="20" width="8" height="410" fill="#1a1a2e" rx="4"/>
+          <rect x="555" y="20" width="8" height="150" fill="#4B0082" rx="4"/>
+        </g>
+
+      </g>
+
+      <!-- ========== NAVIGAZIONE PAGINE ========== -->
+      <g id="pageNav" transform="translate(0, 650)">
+        <g style="cursor: pointer;">
+          <rect x="0" y="0" width="120" height="40" fill="#2E0854" stroke="#4B0082" stroke-width="2" rx="5"/>
+          <path d="M30,20 L45,10 L45,30 Z" fill="#9370DB"/>
+          <text x="75" y="26" font-family="Georgia, serif" font-size="12" fill="#DDA0DD">INDIETRO</text>
+        </g>
+
+        <text x="560" y="28" font-family="Georgia, serif" font-size="14" fill="#8B7355" text-anchor="middle">Sezione 2 di 5</text>
+
+        <g transform="translate(990, 0)" style="cursor: pointer;">
+          <rect x="0" y="0" width="120" height="40" fill="#2E0854" stroke="#4B0082" stroke-width="2" rx="5"/>
+          <text x="40" y="26" font-family="Georgia, serif" font-size="12" fill="#DDA0DD">AVANTI</text>
+          <path d="M100,20 L85,10 L85,30 Z" fill="#9370DB"/>
+        </g>
+      </g>
+
+    </g>
+
+    <!-- ========== PULSANTE CHIUSURA ========== -->
+    <g id="closeButton3" transform="translate(1730, 110)" style="cursor: pointer;">
+      <circle cx="0" cy="0" r="25" fill="#4B0082" stroke="#9370DB" stroke-width="2"/>
+      <line x1="-10" y1="-10" x2="10" y2="10" stroke="#DDA0DD" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="-10" x2="-10" y2="10" stroke="#DDA0DD" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- ========== SIMBOLO ELDRITCH DECORATIVO ========== -->
+    <g id="eldritchDecor" transform="translate(290, 750)" opacity="0.3">
+      <!-- Cerchio esterno -->
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#4B0082" stroke-width="2"/>
+      <!-- Triangolo interno -->
+      <path d="M0,-60 L52,30 L-52,30 Z" fill="none" stroke="#4B0082" stroke-width="1.5"/>
+      <!-- Triangolo invertito -->
+      <path d="M0,60 L52,-30 L-52,-30 Z" fill="none" stroke="#4B0082" stroke-width="1.5"/>
+      <!-- Cerchio interno -->
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#4B0082" stroke-width="1"/>
+      <!-- Occhio centrale -->
+      <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#9370DB" stroke-width="1"/>
+      <circle cx="0" cy="0" r="5" fill="#9370DB"/>
+    </g>
+
+  </g>
+
+  <!-- ========== LEGENDA ========== -->
+  <g id="legend3" transform="translate(20, 1000)">
+    <text font-family="Arial, sans-serif" font-size="12" fill="#666">
+      <tspan x="0" dy="0">PROPOSTA 3: Codex Arcano - Stile Lovecraftiano/The Witcher</tspan>
+      <tspan x="0" dy="18">Sidebar capitoli con progressione | Tab sezioni orizzontali | Area contenuto scrollabile | Estetica cosmica</tspan>
+    </text>
+  </g>
+
+</svg>

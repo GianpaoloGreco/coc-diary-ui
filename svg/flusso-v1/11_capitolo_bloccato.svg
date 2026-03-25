@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="parchmentTexture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#E8DCC8"/>
+    </pattern>
+    <linearGradient id="leatherGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3D2914"/>
+      <stop offset="50%" style="stop-color:#5C4033"/>
+      <stop offset="100%" style="stop-color:#3D2914"/>
+    </linearGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <g id="diaryOpen" filter="url(#dropShadow)">
+    <rect x="160" y="60" width="1600" height="960" fill="url(#leatherGradient)" rx="15"/>
+    <rect x="945" y="60" width="30" height="960" fill="#2a1f14"/>
+
+    <!-- ========== PAGINA SINISTRA - CAPITOLO IV BLOCCATO ========== -->
+    <rect x="180" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="200" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <!-- Overlay oscurato -->
+    <rect x="200" y="100" width="720" height="860" fill="#1a1208" opacity="0.7"/>
+
+    <!-- Header -->
+    <text x="560" y="200" font-family="Georgia, serif" font-size="36" fill="#5C4033" text-anchor="middle" font-weight="bold">CAPITOLO IV</text>
+    <text x="560" y="245" font-family="Georgia, serif" font-size="20" fill="#3D2914" text-anchor="middle" font-style="italic">???</text>
+
+    <!-- Grande lucchetto centrale -->
+    <g transform="translate(560, 450)">
+      <rect x="-60" y="-30" width="120" height="90" fill="#3D2914" stroke="#5C4033" stroke-width="4" rx="10"/>
+      <path d="M-40,-30 L-40,-70 Q0,-120 40,-70 L40,-30" fill="none" stroke="#5C4033" stroke-width="8" stroke-linecap="round"/>
+      <!-- Buco serratura -->
+      <circle cx="0" cy="10" r="15" fill="#1a1208"/>
+      <rect x="-8" y="10" width="16" height="30" fill="#1a1208"/>
+    </g>
+
+    <!-- Messaggio -->
+    <text x="560" y="620" font-family="Georgia, serif" font-size="22" fill="#8B7355" text-anchor="middle">Capitolo non ancora disponibile</text>
+    <text x="560" y="660" font-family="Georgia, serif" font-size="16" fill="#5C4033" text-anchor="middle">Prosegui nella storia per sbloccare</text>
+    <text x="560" y="690" font-family="Georgia, serif" font-size="16" fill="#5C4033" text-anchor="middle">questo contenuto.</text>
+
+    <!-- Requisiti -->
+    <rect x="340" y="740" width="440" height="100" fill="#2a1f14" stroke="#5C4033" stroke-width="2" rx="10"/>
+    <text x="560" y="775" font-family="Georgia, serif" font-size="14" fill="#DAA520" text-anchor="middle" font-weight="bold">REQUISITO PER SBLOCCARE:</text>
+    <text x="560" y="805" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">Completa tutte le sezioni del Capitolo III</text>
+    <!-- Progresso -->
+    <rect x="380" y="820" width="360" height="10" fill="#1a1208" stroke="#5C4033" stroke-width="1" rx="5"/>
+    <rect x="380" y="820" width="216" height="10" fill="#DAA520" rx="5"/>
+    <text x="560" y="845" font-family="Georgia, serif" font-size="11" fill="#5C4033" text-anchor="middle">60% completato</text>
+
+    <!-- Angoli -->
+    <path d="M200,100 L240,100 L200,140 Z" fill="#5C4033"/>
+    <path d="M920,100 L880,100 L920,140 Z" fill="#5C4033"/>
+    <path d="M200,960 L240,960 L200,920 Z" fill="#5C4033"/>
+    <path d="M920,960 L880,960 L920,920 Z" fill="#5C4033"/>
+
+    <!-- ========== PAGINA DESTRA - BLOCCATA ========== -->
+    <rect x="980" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="1000" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <!-- Overlay oscurato -->
+    <rect x="1000" y="100" width="720" height="860" fill="#1a1208" opacity="0.7"/>
+
+    <!-- Contenuto misterioso -->
+    <g transform="translate(1360, 400)">
+      <!-- Simboli misteriosi -->
+      <text x="0" y="-100" font-family="Georgia, serif" font-size="80" fill="#3D2914" text-anchor="middle" opacity="0.5">?</text>
+      <text x="-100" y="0" font-family="Georgia, serif" font-size="60" fill="#3D2914" text-anchor="middle" opacity="0.3">?</text>
+      <text x="100" y="0" font-family="Georgia, serif" font-size="60" fill="#3D2914" text-anchor="middle" opacity="0.3">?</text>
+      <text x="0" y="100" font-family="Georgia, serif" font-size="80" fill="#3D2914" text-anchor="middle" opacity="0.5">?</text>
+
+      <!-- Cerchio mistico -->
+      <circle cx="0" cy="0" r="120" fill="none" stroke="#5C4033" stroke-width="2" opacity="0.3"/>
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#5C4033" stroke-width="1" opacity="0.2"/>
+    </g>
+
+    <!-- Testo teaser -->
+    <text x="1360" y="650" font-family="Georgia, serif" font-size="18" fill="#5C4033" text-anchor="middle" font-style="italic">"Nelle profondità attende</text>
+    <text x="1360" y="680" font-family="Georgia, serif" font-size="18" fill="#5C4033" text-anchor="middle" font-style="italic">ciò che non dovrebbe essere visto..."</text>
+
+    <!-- Angoli -->
+    <path d="M1000,100 L1040,100 L1000,140 Z" fill="#5C4033"/>
+    <path d="M1720,100 L1680,100 L1720,140 Z" fill="#5C4033"/>
+    <path d="M1000,960 L1040,960 L1000,920 Z" fill="#5C4033"/>
+    <path d="M1720,960 L1680,960 L1720,920 Z" fill="#5C4033"/>
+
+    <!-- ========== TAB CAPITOLI (IV tentato) ========== -->
+    <g id="chapterTabs">
+      <g transform="translate(130, 180)" style="cursor: pointer;">
+        <path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/>
+        <text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">I</text>
+        <circle cx="-25" cy="52" r="6" fill="#228B22"/>
+      </g>
+      <g transform="translate(130, 260)" style="cursor: pointer;">
+        <path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/>
+        <text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">II</text>
+        <circle cx="-25" cy="52" r="6" fill="#228B22"/>
+      </g>
+      <g transform="translate(130, 340)" style="cursor: pointer;">
+        <path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/>
+        <text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">III</text>
+        <circle cx="-25" cy="52" r="6" fill="#DAA520"/>
+      </g>
+      <!-- Tab IV (SELEZIONATO MA BLOCCATO) -->
+      <g transform="translate(130, 420)" style="cursor: pointer;">
+        <path d="M0,0 L-60,10 L-60,55 L0,65 Z" fill="#3D2914" stroke="#8B0000" stroke-width="3"/>
+        <text x="-38" y="40" font-family="Georgia, serif" font-size="18" fill="#8B0000" font-weight="bold">IV</text>
+        <rect x="-42" y="48" width="14" height="10" fill="none" stroke="#8B0000" stroke-width="2" rx="2"/>
+        <path d="M-37,48 L-37,43 Q-35,38 -33,43 L-33,48" fill="none" stroke="#8B0000" stroke-width="2"/>
+      </g>
+      <g transform="translate(130, 500)" style="cursor: pointer;" opacity="0.5">
+        <path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#3D2914" stroke="#2a1f14" stroke-width="1"/>
+        <text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#5C4033" font-weight="bold">V</text>
+        <rect x="-35" y="48" width="12" height="9" fill="none" stroke="#5C4033" stroke-width="1.5"/>
+      </g>
+    </g>
+
+    <!-- Popup avviso -->
+    <g transform="translate(960, 50)">
+      <rect x="-250" y="0" width="500" height="60" fill="#8B0000" stroke="#DAA520" stroke-width="2" rx="10"/>
+      <text x="0" y="25" font-family="Georgia, serif" font-size="16" fill="#E8DCC8" text-anchor="middle" font-weight="bold">Capitolo Bloccato</text>
+      <text x="0" y="48" font-family="Georgia, serif" font-size="13" fill="#C4B598" text-anchor="middle">Completa il Capitolo III per procedere</text>
+    </g>
+
+    <!-- Pulsante torna indietro -->
+    <g transform="translate(960, 920)" style="cursor: pointer;">
+      <rect x="-120" y="0" width="240" height="50" fill="#5C4033" stroke="#DAA520" stroke-width="2" rx="8"/>
+      <text x="0" y="32" font-family="Georgia, serif" font-size="16" fill="#DAA520" text-anchor="middle" font-weight="bold">Torna al Capitolo III</text>
+    </g>
+
+    <!-- Chiusura -->
+    <g transform="translate(1720, 90)" style="cursor: pointer;">
+      <circle cx="0" cy="0" r="25" fill="#8B0000" stroke="#DAA520" stroke-width="2"/>
+      <line x1="-10" y1="-10" x2="10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="-10" x2="-10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <rect x="20" y="1030" width="600" height="30" fill="#000" opacity="0.7" rx="5"/>
+  <text x="40" y="1052" font-family="Arial, sans-serif" font-size="14" fill="#DAA520">STATO: Tentativo accesso CAPITOLO BLOCCATO - Messaggio + requisiti + teaser</text>
+
+</svg>

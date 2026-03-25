@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="parchmentTexture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#E8DCC8"/>
+    </pattern>
+    <linearGradient id="leatherGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3D2914"/>
+      <stop offset="50%" style="stop-color:#5C4033"/>
+      <stop offset="100%" style="stop-color:#3D2914"/>
+    </linearGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <g id="diaryOpen" filter="url(#dropShadow)">
+    <rect x="160" y="60" width="1600" height="960" fill="url(#leatherGradient)" rx="15"/>
+    <rect x="945" y="60" width="30" height="960" fill="#2a1f14"/>
+
+    <!-- ========== PAGINA SINISTRA (MAPPA/LOCATION) ========== -->
+    <rect x="180" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="200" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <text x="560" y="150" font-family="Georgia, serif" font-size="32" fill="#3D2914" text-anchor="middle" font-weight="bold">CAPITOLO III</text>
+    <line x1="350" y1="170" x2="770" y2="170" stroke="#8B7355" stroke-width="1"/>
+
+    <!-- MAPPA STILIZZATA -->
+    <rect x="230" y="200" width="660" height="450" fill="#D4C5A9" stroke="#8B7355" stroke-width="3"/>
+
+    <!-- Elementi mappa -->
+    <g transform="translate(230, 200)">
+      <!-- Sfondo mappa antica -->
+      <rect x="10" y="10" width="640" height="430" fill="#E5D9C3"/>
+
+      <!-- Strade/percorsi -->
+      <path d="M50,400 Q150,350 200,250 Q250,180 350,200 Q450,220 500,150 Q550,100 600,120" fill="none" stroke="#8B7355" stroke-width="3" stroke-dasharray="10,5"/>
+
+      <!-- Location: Piazza centrale (visitata) -->
+      <g transform="translate(150, 320)">
+        <circle cx="0" cy="0" r="20" fill="#228B22" stroke="#DAA520" stroke-width="2"/>
+        <text x="0" y="5" font-family="Georgia" font-size="14" fill="#fff" text-anchor="middle">1</text>
+        <text x="0" y="40" font-family="Georgia, serif" font-size="11" fill="#3D2914" text-anchor="middle">Piazza</text>
+      </g>
+
+      <!-- Location: Bazar (visitata) -->
+      <g transform="translate(280, 220)">
+        <circle cx="0" cy="0" r="20" fill="#228B22" stroke="#DAA520" stroke-width="2"/>
+        <text x="0" y="5" font-family="Georgia" font-size="14" fill="#fff" text-anchor="middle">2</text>
+        <text x="0" y="40" font-family="Georgia, serif" font-size="11" fill="#3D2914" text-anchor="middle">Bazar</text>
+      </g>
+
+      <!-- Location: Biblioteca (SELEZIONATA) -->
+      <g transform="translate(420, 180)">
+        <circle cx="0" cy="0" r="25" fill="#DAA520" stroke="#FFD700" stroke-width="3"/>
+        <text x="0" y="7" font-family="Georgia" font-size="16" fill="#3D2914" text-anchor="middle" font-weight="bold">3</text>
+        <text x="0" y="50" font-family="Georgia, serif" font-size="12" fill="#3D2914" text-anchor="middle" font-weight="bold">Biblioteca</text>
+      </g>
+
+      <!-- Location: Catacombe (bloccata) -->
+      <g transform="translate(550, 130)" opacity="0.5">
+        <circle cx="0" cy="0" r="20" fill="#3D2914" stroke="#5C4033" stroke-width="2"/>
+        <text x="0" y="5" font-family="Georgia" font-size="14" fill="#5C4033" text-anchor="middle">?</text>
+        <text x="0" y="40" font-family="Georgia, serif" font-size="11" fill="#5C4033" text-anchor="middle">???</text>
+      </g>
+
+      <!-- Bussola -->
+      <g transform="translate(580, 380)">
+        <circle cx="0" cy="0" r="35" fill="#E8DCC8" stroke="#8B7355" stroke-width="2"/>
+        <path d="M0,-25 L5,0 L0,25 L-5,0 Z" fill="#8B0000"/>
+        <path d="M0,-25 L-5,0 L0,25 L5,0 Z" fill="#3D2914"/>
+        <text x="0" y="-40" font-family="Georgia, serif" font-size="10" fill="#3D2914" text-anchor="middle">N</text>
+      </g>
+
+      <!-- Legenda -->
+      <g transform="translate(20, 380)">
+        <circle cx="10" cy="10" r="8" fill="#228B22"/>
+        <text x="25" y="14" font-family="Georgia, serif" font-size="10" fill="#3D2914">Visitato</text>
+        <circle cx="10" cy="35" r="8" fill="#DAA520"/>
+        <text x="25" y="39" font-family="Georgia, serif" font-size="10" fill="#3D2914">Attuale</text>
+        <circle cx="10" cy="60" r="8" fill="#3D2914" opacity="0.5"/>
+        <text x="25" y="64" font-family="Georgia, serif" font-size="10" fill="#5C4033">Bloccato</text>
+      </g>
+    </g>
+
+    <!-- Dettaglio location selezionata -->
+    <rect x="230" y="680" width="660" height="150" fill="#D4C5A9" stroke="#8B7355" stroke-width="1"/>
+    <text x="250" y="710" font-family="Georgia, serif" font-size="18" fill="#3D2914" font-weight="bold">La Grande Biblioteca</text>
+    <text x="250" y="735" font-family="Georgia, serif" font-size="12" fill="#8B7355">Atene - Capitolo III</text>
+    <text font-family="Georgia, serif" font-size="13" fill="#3D2914">
+      <tspan x="250" y="765">Un magnifico edificio che custodisce millenni di sapere.</tspan>
+      <tspan x="250" dy="20">I suoi scaffali nascondono segreti che alcuni preferirebbero</tspan>
+      <tspan x="250" dy="20">rimanessero sepolti per sempre...</tspan>
+    </text>
+
+    <!-- Angoli -->
+    <path d="M200,100 L240,100 L200,140 Z" fill="#8B7355"/>
+    <path d="M920,100 L880,100 L920,140 Z" fill="#8B7355"/>
+    <path d="M200,960 L240,960 L200,920 Z" fill="#8B7355"/>
+    <path d="M920,960 L880,960 L920,920 Z" fill="#8B7355"/>
+
+    <!-- ========== PAGINA DESTRA (LISTA LUOGHI) ========== -->
+    <rect x="980" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="1000" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <!-- TAB SEZIONI -->
+    <g id="sectionTabs" transform="translate(1020, 120)">
+      <g><rect x="0" y="0" width="120" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="60" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">STORIA</text></g>
+      <g transform="translate(130, 0)"><rect x="0" y="0" width="120" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="60" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">GALLERIA</text></g>
+      <g transform="translate(260, 0)"><rect x="0" y="0" width="130" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="65" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">PERSONAGGI</text></g>
+      <!-- Tab Luoghi (ATTIVO) -->
+      <g transform="translate(400, 0)"><rect x="0" y="0" width="100" height="40" fill="#5C4033" stroke="#DAA520" stroke-width="2" rx="5"/><text x="50" y="27" font-family="Georgia, serif" font-size="13" fill="#E8DCC8" text-anchor="middle" font-weight="bold">LUOGHI</text></g>
+      <g transform="translate(510, 0)"><rect x="0" y="0" width="100" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="50" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">INDIZI</text></g>
+    </g>
+
+    <line x1="1020" y1="175" x2="1700" y2="175" stroke="#8B7355" stroke-width="1"/>
+    <text x="1360" y="210" font-family="Georgia, serif" font-size="20" fill="#3D2914" text-anchor="middle" font-weight="bold">Luoghi visitati</text>
+
+    <!-- LISTA LUOGHI -->
+    <g transform="translate(1030, 240)">
+      <!-- Luogo 1: Piazza -->
+      <g style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="90" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="100" height="70" fill="#D4A574"/>
+        <text x="60" y="50" font-family="Georgia" font-size="10" fill="#8B7355" text-anchor="middle">[Miniatura]</text>
+        <text x="130" y="35" font-family="Georgia, serif" font-size="16" fill="#DAA520" font-weight="bold">Piazza Centrale di Kabar</text>
+        <text x="130" y="55" font-family="Georgia, serif" font-size="12" fill="#C4B598">Il cuore pulsante della città</text>
+        <text x="130" y="75" font-family="Georgia, serif" font-size="11" fill="#8B7355">3 interazioni disponibili</text>
+        <circle cx="600" cy="45" r="12" fill="#228B22"/>
+        <text x="600" y="50" font-family="Georgia" font-size="12" fill="#fff" text-anchor="middle">&#10003;</text>
+      </g>
+
+      <!-- Luogo 2: Bazar -->
+      <g transform="translate(0, 110)" style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="90" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="100" height="70" fill="#D4A574"/>
+        <text x="60" y="50" font-family="Georgia" font-size="10" fill="#8B7355" text-anchor="middle">[Miniatura]</text>
+        <text x="130" y="35" font-family="Georgia, serif" font-size="16" fill="#DAA520" font-weight="bold">Il Grande Bazar</text>
+        <text x="130" y="55" font-family="Georgia, serif" font-size="12" fill="#C4B598">Dove i segreti hanno un prezzo</text>
+        <text x="130" y="75" font-family="Georgia, serif" font-size="11" fill="#8B7355">5 interazioni disponibili</text>
+        <circle cx="600" cy="45" r="12" fill="#228B22"/>
+        <text x="600" y="50" font-family="Georgia" font-size="12" fill="#fff" text-anchor="middle">&#10003;</text>
+      </g>
+
+      <!-- Luogo 3: Biblioteca (SELEZIONATO) -->
+      <g transform="translate(0, 220)" style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="90" fill="#5C4033" stroke="#DAA520" stroke-width="3" rx="8"/>
+        <rect x="10" y="10" width="100" height="70" fill="#D4A574" stroke="#DAA520" stroke-width="2"/>
+        <text x="60" y="50" font-family="Georgia" font-size="10" fill="#8B7355" text-anchor="middle">[Miniatura]</text>
+        <text x="130" y="35" font-family="Georgia, serif" font-size="16" fill="#E8DCC8" font-weight="bold">La Grande Biblioteca</text>
+        <text x="130" y="55" font-family="Georgia, serif" font-size="12" fill="#C4B598">Custode di conoscenze proibite</text>
+        <text x="130" y="75" font-family="Georgia, serif" font-size="11" fill="#DAA520">Posizione attuale</text>
+        <circle cx="600" cy="45" r="15" fill="#DAA520"/>
+        <text x="600" y="50" font-family="Georgia" font-size="14" fill="#3D2914" text-anchor="middle" font-weight="bold">!</text>
+      </g>
+
+      <!-- Luogo 4: Bloccato -->
+      <g transform="translate(0, 330)" style="cursor: pointer;" opacity="0.5">
+        <rect x="0" y="0" width="640" height="90" fill="#2a1f14" stroke="#3D2914" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="100" height="70" fill="#1a1208"/>
+        <text x="60" y="50" font-family="Georgia" font-size="20" fill="#3D2914" text-anchor="middle">?</text>
+        <text x="130" y="35" font-family="Georgia, serif" font-size="16" fill="#5C4033" font-weight="bold">???</text>
+        <text x="130" y="55" font-family="Georgia, serif" font-size="12" fill="#3D2914">Luogo non ancora scoperto</text>
+        <text x="130" y="75" font-family="Georgia, serif" font-size="11" fill="#3D2914">Prosegui nella storia...</text>
+      </g>
+    </g>
+
+    <!-- Progresso -->
+    <text x="1360" y="720" font-family="Georgia, serif" font-size="14" fill="#5C4033" text-anchor="middle">3 di 4 luoghi scoperti</text>
+    <rect x="1130" y="740" width="460" height="12" fill="#D4C5A9" stroke="#8B7355" stroke-width="1" rx="6"/>
+    <rect x="1130" y="740" width="345" height="12" fill="#DAA520" rx="6"/>
+
+    <!-- Angoli -->
+    <path d="M1000,100 L1040,100 L1000,140 Z" fill="#8B7355"/>
+    <path d="M1720,100 L1680,100 L1720,140 Z" fill="#8B7355"/>
+    <path d="M1000,960 L1040,960 L1000,920 Z" fill="#8B7355"/>
+    <path d="M1720,960 L1680,960 L1720,920 Z" fill="#8B7355"/>
+
+    <!-- Tab capitoli -->
+    <g id="chapterTabs">
+      <g transform="translate(130, 180)"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">I</text></g>
+      <g transform="translate(130, 260)"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">II</text></g>
+      <g transform="translate(130, 340)"><path d="M0,0 L-60,10 L-60,55 L0,65 Z" fill="#8B7355" stroke="#DAA520" stroke-width="3"/><text x="-38" y="40" font-family="Georgia, serif" font-size="18" fill="#E8DCC8" font-weight="bold">III</text></g>
+      <g transform="translate(130, 420)" opacity="0.5"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#3D2914"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#5C4033" font-weight="bold">IV</text></g>
+      <g transform="translate(130, 500)" opacity="0.5"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#3D2914"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#5C4033" font-weight="bold">V</text></g>
+    </g>
+
+    <!-- Chiusura -->
+    <g transform="translate(1720, 90)" style="cursor: pointer;">
+      <circle cx="0" cy="0" r="25" fill="#8B0000" stroke="#DAA520" stroke-width="2"/>
+      <line x1="-10" y1="-10" x2="10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="-10" x2="-10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <rect x="20" y="1030" width="520" height="30" fill="#000" opacity="0.7" rx="5"/>
+  <text x="40" y="1052" font-family="Arial, sans-serif" font-size="14" fill="#DAA520">STATO: Diario APERTO - Tab LUOGHI - Mappa + lista location</text>
+
+</svg>

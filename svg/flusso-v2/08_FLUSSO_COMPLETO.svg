@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#1a1510"/>
+
+  <!-- Titolo -->
+  <text x="960" y="60" font-family="Georgia, serif" font-size="36" fill="#D4C4A8" text-anchor="middle" font-style="italic">Diario Manoscritto - Flusso Completo</text>
+  <path d="M500,80 Q960,90 1420,80" fill="none" stroke="#6a5a4a" stroke-width="1"/>
+
+  <!-- ========== RIGA 1: GAMEPLAY → APERTURA ========== -->
+
+  <!-- Card: Gameplay -->
+  <g transform="translate(80, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4a3a2a" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#1a1510"/>
+    <text x="100" y="55" font-family="Georgia, serif" font-size="11" fill="#5a4a3a" text-anchor="middle">[Gameplay]</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Gioco attivo</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">05_pulsante_*.svg</text>
+  </g>
+
+  <!-- Freccia -->
+  <g transform="translate(290, 180)">
+    <path d="M0,0 L60,0 L55,-8 M60,0 L55,8" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <text x="30" y="25" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">click</text>
+  </g>
+
+  <!-- Card: Transizione -->
+  <g transform="translate(360, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4a3a2a" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#1a1510"/>
+    <text x="100" y="55" font-family="Georgia, serif" font-size="11" fill="#5a4a3a" text-anchor="middle">[Animazione]</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Apertura libro</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">06_transizione_*.svg</text>
+  </g>
+
+  <!-- Freccia -->
+  <g transform="translate(570, 180)">
+    <path d="M0,0 L60,0 L55,-8 M60,0 L55,8" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <text x="30" y="25" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">600ms</text>
+  </g>
+
+  <!-- Card: Storia (principale) -->
+  <g transform="translate(640, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#3D2914" stroke="#DAA520" stroke-width="3" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#D4C4A8"/>
+    <text x="100" y="50" font-family="Georgia, serif" font-size="11" fill="#2a1f14" text-anchor="middle">Capitolo III</text>
+    <text x="100" y="70" font-family="Georgia, serif" font-size="9" fill="#4a3a2a" text-anchor="middle">[illustrazione + testo]</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Storia</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#DAA520" text-anchor="middle">01_diario_aperto_storia.svg</text>
+  </g>
+
+  <!-- ========== NAVIGAZIONE SEZIONI ========== -->
+
+  <!-- Frecce verso le sezioni -->
+  <g transform="translate(740, 270)">
+    <!-- Freccia verso Personaggi -->
+    <path d="M0,0 L-200,100" fill="none" stroke="#8B4513" stroke-width="2"/>
+    <circle cx="-200" cy="100" r="5" fill="#8B4513"/>
+
+    <!-- Freccia verso Luoghi -->
+    <path d="M0,0 L0,100" fill="none" stroke="#2F4F4F" stroke-width="2"/>
+    <circle cx="0" cy="100" r="5" fill="#2F4F4F"/>
+
+    <!-- Freccia verso Indizi -->
+    <path d="M0,0 L200,100" fill="none" stroke="#4B0082" stroke-width="2"/>
+    <circle cx="200" cy="100" r="5" fill="#4B0082"/>
+
+    <text x="0" y="-15" font-family="Georgia, serif" font-size="11" fill="#8a7a6a" text-anchor="middle">segnalibri</text>
+  </g>
+
+  <!-- Card: Personaggi -->
+  <g transform="translate(440, 380)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#8B4513" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#D4C4A8"/>
+    <circle cx="50" cy="50" r="25" fill="#1a1510"/>
+    <text x="50" y="55" font-family="Georgia, serif" font-size="8" fill="#5a4a3a" text-anchor="middle">[ritratto]</text>
+    <text x="130" y="45" font-family="Georgia, serif" font-size="10" fill="#2a1f14" text-anchor="middle">Canus</text>
+    <text x="130" y="60" font-family="Georgia, serif" font-size="8" fill="#4a3a2a" text-anchor="middle">studioso</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Anime</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#8B4513" text-anchor="middle">02_diario_personaggi.svg</text>
+  </g>
+
+  <!-- Card: Luoghi -->
+  <g transform="translate(640, 380)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#2F4F4F" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#E5D9C3"/>
+    <!-- Mini mappa -->
+    <path d="M30,40 Q60,30 90,50 Q120,70 150,40" fill="none" stroke="#4a3a2a" stroke-width="1.5"/>
+    <circle cx="60" cy="35" r="4" fill="none" stroke="#228B22" stroke-width="1"/>
+    <circle cx="120" cy="55" r="5" fill="#8B0000"/>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Luoghi</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#2F4F4F" text-anchor="middle">03_diario_luoghi.svg</text>
+  </g>
+
+  <!-- Card: Indizi -->
+  <g transform="translate(840, 380)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4B0082" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#D4C4A8"/>
+    <!-- Mini schizzi indizi -->
+    <rect x="25" y="25" width="30" height="40" fill="#1a1510" stroke="#4a3a2a" stroke-width="1"/>
+    <rect x="65" y="30" width="35" height="35" fill="#1a1510" stroke="#4a3a2a" stroke-width="1"/>
+    <circle cx="130" cy="50" r="20" fill="#1a1510" stroke="#4a3a2a" stroke-width="1"/>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Indizi</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#4B0082" text-anchor="middle">04_diario_indizi.svg</text>
+  </g>
+
+  <!-- ========== RIGA 3: INDICE CAPITOLI ========== -->
+
+  <!-- Freccia da Storia a Indice -->
+  <g transform="translate(850, 180)">
+    <path d="M0,0 L100,0 L95,-8 M100,0 L95,8" fill="none" stroke="#6a5a4a" stroke-width="2"/>
+    <text x="50" y="25" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">I II III...</text>
+  </g>
+
+  <!-- Card: Indice Capitoli -->
+  <g transform="translate(960, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4a3a2a" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#D4C4A8"/>
+    <text font-family="Georgia, serif" font-size="10" fill="#2a1f14">
+      <tspan x="25" y="30">I. Il Richiamo</tspan>
+      <tspan x="25" dy="15">II. Il Viaggio</tspan>
+      <tspan x="25" dy="15" fill="#8B0000">III. La Biblioteca</tspan>
+      <tspan x="25" dy="15" fill="#9a8a7a">IV. ???</tspan>
+    </text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Indice Capitoli</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">07_capitoli_navigazione.svg</text>
+  </g>
+
+  <!-- ========== CHIUSURA ========== -->
+
+  <!-- Frecce di ritorno -->
+  <g transform="translate(1170, 180)">
+    <path d="M0,0 L60,0 L55,-8 M60,0 L55,8" fill="none" stroke="#6a5a4a" stroke-width="2"/>
+    <text x="30" y="25" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">X / ESC</text>
+  </g>
+
+  <!-- Card: Chiusura -->
+  <g transform="translate(1240, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4a3a2a" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#1a1510"/>
+    <text x="100" y="55" font-family="Georgia, serif" font-size="11" fill="#5a4a3a" text-anchor="middle">[Animazione inversa]</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Chiusura</text>
+    <text x="100" y="135" font-family="Georgia, serif" font-size="10" fill="#8a7a6a" text-anchor="middle">06_transizione_*.svg</text>
+  </g>
+
+  <!-- Freccia ritorno gameplay -->
+  <g transform="translate(1450, 180)">
+    <path d="M0,0 L60,0 L55,-8 M60,0 L55,8" fill="none" stroke="#6a5a4a" stroke-width="2"/>
+  </g>
+
+  <!-- Card: Ritorno gameplay -->
+  <g transform="translate(1520, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="200" height="140" fill="#2a2520" stroke="#4a3a2a" stroke-width="2" rx="5"/>
+    <rect x="10" y="10" width="180" height="80" fill="#1a1510"/>
+    <text x="100" y="55" font-family="Georgia, serif" font-size="11" fill="#5a4a3a" text-anchor="middle">[Gameplay]</text>
+    <text x="100" y="115" font-family="Georgia, serif" font-size="14" fill="#D4C4A8" text-anchor="middle" font-style="italic">Ritorno al gioco</text>
+  </g>
+
+  <!-- ========== LEGENDA ========== -->
+  <g transform="translate(80, 600)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="24" fill="#D4C4A8" font-style="italic">Legenda navigazione</text>
+    <path d="M0,15 L250,15" fill="none" stroke="#4a3a2a" stroke-width="1"/>
+
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="30" height="20" fill="#3D2914" stroke="#DAA520" stroke-width="2"/>
+      <text x="45" y="15" font-family="Georgia, serif" font-size="14" fill="#8a7a6a">Schermata principale (Storia)</text>
+    </g>
+
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="30" height="20" fill="#2a2520" stroke="#8B4513" stroke-width="2"/>
+      <text x="45" y="15" font-family="Georgia, serif" font-size="14" fill="#8a7a6a">Sezione Personaggi (segnalibro marrone)</text>
+    </g>
+
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="30" height="20" fill="#2a2520" stroke="#2F4F4F" stroke-width="2"/>
+      <text x="45" y="15" font-family="Georgia, serif" font-size="14" fill="#8a7a6a">Sezione Luoghi (segnalibro verde scuro)</text>
+    </g>
+
+    <g transform="translate(0, 170)">
+      <rect x="0" y="0" width="30" height="20" fill="#2a2520" stroke="#4B0082" stroke-width="2"/>
+      <text x="45" y="15" font-family="Georgia, serif" font-size="14" fill="#8a7a6a">Sezione Indizi (segnalibro viola)</text>
+    </g>
+
+    <g transform="translate(0, 210)">
+      <path d="M0,10 L30,10 L25,2 M30,10 L25,18" fill="none" stroke="#DAA520" stroke-width="2"/>
+      <text x="45" y="15" font-family="Georgia, serif" font-size="14" fill="#8a7a6a">Transizione/azione utente</text>
+    </g>
+  </g>
+
+  <!-- ========== INTERAZIONI ========== -->
+  <g transform="translate(600, 600)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="24" fill="#D4C4A8" font-style="italic">Interazioni disponibili</text>
+    <path d="M0,15 L300,15" fill="none" stroke="#4a3a2a" stroke-width="1"/>
+
+    <text font-family="Georgia, serif" font-size="14" fill="#8a7a6a">
+      <tspan x="0" dy="50">Segnalibri (lato destro)</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">→ Cambio sezione con animazione voltapagina</tspan>
+
+      <tspan x="0" dy="35">Numeri capitoli (in alto)</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">→ Apre indice capitoli</tspan>
+
+      <tspan x="0" dy="35">Pulsante X (angolo destro)</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">→ Chiude il diario (anche ESC)</tspan>
+
+      <tspan x="0" dy="35">Freccia "continua" / "alla storia"</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">→ Torna alla sezione Storia</tspan>
+    </text>
+  </g>
+
+  <!-- ========== NOTE STILE ========== -->
+  <g transform="translate(1150, 600)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="24" fill="#D4C4A8" font-style="italic">Principi di design</text>
+    <path d="M0,15 L280,15" fill="none" stroke="#4a3a2a" stroke-width="1"/>
+
+    <text font-family="Georgia, serif" font-size="14" fill="#8a7a6a">
+      <tspan x="0" dy="50">Niente elementi moderni</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">No badge, no progress bar, no tag</tspan>
+
+      <tspan x="0" dy="35">Tutto scritto a mano</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">Font Georgia italic, tratti irregolari</tspan>
+
+      <tspan x="0" dy="35">Navigazione fisica</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">Segnalibri di stoffa, non tab</tspan>
+
+      <tspan x="0" dy="35">Indicatori discreti</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">Simboli (*), tratteggi, colori tenui</tspan>
+
+      <tspan x="0" dy="35">Atmosfera 500 A.C.</tspan>
+      <tspan x="20" dy="22" fill="#6a5a4a" font-style="italic">Pergamena, inchiostro, schizzi a mano</tspan>
+    </text>
+  </g>
+
+  <!-- File count -->
+  <g transform="translate(960, 980)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="16" fill="#6a5a4a" text-anchor="middle" font-style="italic">
+      Totale: 8 file SVG nella cartella Diario_Manoscritto_v2
+    </text>
+  </g>
+
+</svg>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="goldBtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <filter id="btnGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sfondo -->
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+
+  <!-- Titolo -->
+  <text x="960" y="60" font-family="Georgia, serif" font-size="36" fill="#DAA520" text-anchor="middle" font-weight="bold">VARIANTI PULSANTE DIARIO</text>
+  <text x="960" y="100" font-family="Georgia, serif" font-size="18" fill="#8B7355" text-anchor="middle">Posizionamento: Barra superiore, accanto all'inventario</text>
+
+  <!-- ========== BARRA UI COMPLETA (Riferimento) ========== -->
+  <g transform="translate(160, 150)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" fill="#DAA520" font-weight="bold">BARRA INTERFACCIA COMPLETA</text>
+
+    <rect x="0" y="0" width="1600" height="70" fill="#2a1f14" stroke="#5C4033" stroke-width="2" rx="5"/>
+
+    <!-- Inventario -->
+    <g id="inv">
+      <rect x="15" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="70" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="125" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="180" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="235" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="290" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="345" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+      <rect x="400" y="10" width="50" height="50" fill="#1a1208" stroke="#8B7355" stroke-width="1" rx="3"/>
+    </g>
+
+    <!-- Separatore -->
+    <line x1="470" y1="10" x2="470" y2="60" stroke="#5C4033" stroke-width="2"/>
+
+    <!-- PULSANTE DIARIO -->
+    <g transform="translate(490, 10)">
+      <rect width="110" height="50" fill="#3D2914" stroke="#DAA520" stroke-width="2" rx="5"/>
+      <rect x="12" y="10" width="24" height="30" fill="#E8DCC8" rx="2"/>
+      <line x1="24" y1="10" x2="24" y2="40" stroke="#3D2914" stroke-width="2"/>
+      <line x1="16" y1="18" x2="32" y2="18" stroke="#8B7355" stroke-width="1"/>
+      <line x1="16" y1="24" x2="32" y2="24" stroke="#8B7355" stroke-width="1"/>
+      <line x1="16" y1="30" x2="32" y2="30" stroke="#8B7355" stroke-width="1"/>
+      <text x="70" y="32" font-family="Georgia, serif" font-size="13" fill="#DAA520" font-weight="bold">DIARIO</text>
+    </g>
+
+    <!-- Altri pulsanti UI -->
+    <g transform="translate(620, 10)">
+      <rect width="80" height="50" fill="#2a1f14" stroke="#5C4033" stroke-width="1" rx="5"/>
+      <text x="40" y="32" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">MAPPA</text>
+    </g>
+    <g transform="translate(710, 10)">
+      <rect width="80" height="50" fill="#2a1f14" stroke="#5C4033" stroke-width="1" rx="5"/>
+      <text x="40" y="32" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">OPZIONI</text>
+    </g>
+
+    <!-- Indicatore notifica -->
+    <circle cx="590" cy="18" r="10" fill="#8B0000" stroke="#DAA520" stroke-width="1"/>
+    <text x="590" y="23" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+
+  <!-- ========== VARIANTE 1: Libro Classico ========== -->
+  <g transform="translate(160, 320)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#C4B598">VARIANTE 1: Libro Classico</text>
+
+    <!-- Stato normale -->
+    <g>
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Normale</text>
+      <rect x="0" y="0" width="120" height="55" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="5"/>
+      <rect x="15" y="10" width="28" height="35" fill="#E8DCC8" rx="2"/>
+      <line x1="29" y1="10" x2="29" y2="45" stroke="#3D2914" stroke-width="2"/>
+      <line x1="20" y1="18" x2="38" y2="18" stroke="#8B7355" stroke-width="1"/>
+      <line x1="20" y1="25" x2="38" y2="25" stroke="#8B7355" stroke-width="1"/>
+      <line x1="20" y1="32" x2="38" y2="32" stroke="#8B7355" stroke-width="1"/>
+      <text x="75" y="35" font-family="Georgia, serif" font-size="12" fill="#DAA520" font-weight="bold">DIARIO</text>
+    </g>
+
+    <!-- Stato hover -->
+    <g transform="translate(150, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Hover</text>
+      <rect x="0" y="0" width="120" height="55" fill="#5C4033" stroke="#DAA520" stroke-width="2" rx="5" filter="url(#btnGlow)"/>
+      <rect x="15" y="10" width="28" height="35" fill="#F5ECD9" rx="2"/>
+      <line x1="29" y1="10" x2="29" y2="45" stroke="#3D2914" stroke-width="2"/>
+      <line x1="20" y1="18" x2="38" y2="18" stroke="#B8860B" stroke-width="1"/>
+      <line x1="20" y1="25" x2="38" y2="25" stroke="#B8860B" stroke-width="1"/>
+      <line x1="20" y1="32" x2="38" y2="32" stroke="#B8860B" stroke-width="1"/>
+      <text x="75" y="35" font-family="Georgia, serif" font-size="12" fill="#FFD700" font-weight="bold">DIARIO</text>
+    </g>
+
+    <!-- Stato con notifica -->
+    <g transform="translate(300, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Con notifica</text>
+      <rect x="0" y="0" width="120" height="55" fill="#3D2914" stroke="#DAA520" stroke-width="2" rx="5"/>
+      <rect x="15" y="10" width="28" height="35" fill="#E8DCC8" rx="2"/>
+      <line x1="29" y1="10" x2="29" y2="45" stroke="#3D2914" stroke-width="2"/>
+      <text x="75" y="35" font-family="Georgia, serif" font-size="12" fill="#DAA520" font-weight="bold">DIARIO</text>
+      <!-- Badge notifica -->
+      <circle cx="105" cy="12" r="12" fill="#8B0000" stroke="#DAA520" stroke-width="1"/>
+      <text x="105" y="17" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+    </g>
+
+    <!-- Stato pressed -->
+    <g transform="translate(450, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Pressed</text>
+      <rect x="0" y="2" width="120" height="55" fill="#2a1f14" stroke="#B8860B" stroke-width="3" rx="5"/>
+      <rect x="15" y="12" width="28" height="35" fill="#D4C5A9" rx="2"/>
+      <line x1="29" y1="12" x2="29" y2="47" stroke="#3D2914" stroke-width="2"/>
+      <text x="75" y="37" font-family="Georgia, serif" font-size="12" fill="#B8860B" font-weight="bold">DIARIO</text>
+    </g>
+  </g>
+
+  <!-- ========== VARIANTE 2: Rotolo/Papiro ========== -->
+  <g transform="translate(160, 480)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#C4B598">VARIANTE 2: Rotolo/Papiro (Oman style)</text>
+
+    <!-- Stato normale -->
+    <g>
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Normale</text>
+      <rect x="0" y="0" width="120" height="55" fill="#5C4033" stroke="#B8860B" stroke-width="2" rx="5"/>
+      <!-- Icona rotolo -->
+      <ellipse cx="28" cy="28" rx="8" ry="16" fill="#E5D9C3" stroke="#8B7355" stroke-width="1"/>
+      <rect x="28" y="14" width="15" height="28" fill="#E5D9C3"/>
+      <ellipse cx="43" cy="28" rx="5" ry="14" fill="#D4C5A9" stroke="#8B7355" stroke-width="1"/>
+      <text x="80" y="35" font-family="Georgia, serif" font-size="12" fill="#DAA520" font-weight="bold">DIARIO</text>
+    </g>
+
+    <!-- Stato hover -->
+    <g transform="translate(150, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Hover</text>
+      <rect x="0" y="0" width="120" height="55" fill="#6B4423" stroke="#DAA520" stroke-width="2" rx="5" filter="url(#btnGlow)"/>
+      <ellipse cx="28" cy="28" rx="8" ry="16" fill="#F5ECD9" stroke="#B8860B" stroke-width="1"/>
+      <rect x="28" y="14" width="15" height="28" fill="#F5ECD9"/>
+      <ellipse cx="43" cy="28" rx="5" ry="14" fill="#E5D9C3" stroke="#B8860B" stroke-width="1"/>
+      <text x="80" y="35" font-family="Georgia, serif" font-size="12" fill="#FFD700" font-weight="bold">DIARIO</text>
+    </g>
+
+    <!-- Stato con notifica -->
+    <g transform="translate(300, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Con notifica</text>
+      <rect x="0" y="0" width="120" height="55" fill="#5C4033" stroke="#B8860B" stroke-width="2" rx="5"/>
+      <ellipse cx="28" cy="28" rx="8" ry="16" fill="#E5D9C3" stroke="#8B7355" stroke-width="1"/>
+      <rect x="28" y="14" width="15" height="28" fill="#E5D9C3"/>
+      <ellipse cx="43" cy="28" rx="5" ry="14" fill="#D4C5A9" stroke="#8B7355" stroke-width="1"/>
+      <text x="80" y="35" font-family="Georgia, serif" font-size="12" fill="#DAA520" font-weight="bold">DIARIO</text>
+      <circle cx="105" cy="12" r="12" fill="#8B0000" stroke="#DAA520" stroke-width="1"/>
+      <text x="105" y="17" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">!</text>
+    </g>
+  </g>
+
+  <!-- ========== VARIANTE 3: Codex Arcano ========== -->
+  <g transform="translate(160, 640)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#C4B598">VARIANTE 3: Codex Arcano (Lovecraftiano)</text>
+
+    <!-- Stato normale -->
+    <g>
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Normale</text>
+      <rect x="0" y="0" width="120" height="55" fill="#2E0854" stroke="#9370DB" stroke-width="2" rx="5"/>
+      <!-- Icona occhio cosmico -->
+      <ellipse cx="30" cy="28" rx="14" ry="10" fill="none" stroke="#9370DB" stroke-width="2"/>
+      <circle cx="30" cy="28" r="5" fill="#9370DB"/>
+      <text x="78" y="35" font-family="Georgia, serif" font-size="12" fill="#DDA0DD" font-weight="bold">CODEX</text>
+    </g>
+
+    <!-- Stato hover -->
+    <g transform="translate(150, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Hover</text>
+      <rect x="0" y="0" width="120" height="55" fill="#4B0082" stroke="#DDA0DD" stroke-width="2" rx="5" filter="url(#btnGlow)"/>
+      <ellipse cx="30" cy="28" rx="14" ry="10" fill="none" stroke="#DDA0DD" stroke-width="2"/>
+      <circle cx="30" cy="28" r="5" fill="#DDA0DD"/>
+      <!-- Glow occhio -->
+      <circle cx="30" cy="28" r="8" fill="none" stroke="#DDA0DD" stroke-width="1" opacity="0.5"/>
+      <text x="78" y="35" font-family="Georgia, serif" font-size="12" fill="#E8DCC8" font-weight="bold">CODEX</text>
+    </g>
+
+    <!-- Stato con notifica (pulsante) -->
+    <g transform="translate(300, 0)">
+      <text x="0" y="80" font-family="Arial" font-size="11" fill="#666">Con notifica</text>
+      <rect x="0" y="0" width="120" height="55" fill="#2E0854" stroke="#9370DB" stroke-width="2" rx="5"/>
+      <ellipse cx="30" cy="28" rx="14" ry="10" fill="none" stroke="#9370DB" stroke-width="2"/>
+      <circle cx="30" cy="28" r="5" fill="#9370DB"/>
+      <text x="78" y="35" font-family="Georgia, serif" font-size="12" fill="#DDA0DD" font-weight="bold">CODEX</text>
+      <!-- Badge notifica con simbolo arcano -->
+      <circle cx="105" cy="12" r="12" fill="#4B0082" stroke="#DDA0DD" stroke-width="2"/>
+      <text x="105" y="17" font-family="Georgia" font-size="14" fill="#DDA0DD" text-anchor="middle">&#x2605;</text>
+    </g>
+  </g>
+
+  <!-- ========== VARIANTE 4: Minimal/Icona sola ========== -->
+  <g transform="translate(160, 800)">
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="14" fill="#C4B598">VARIANTE 4: Minimal (solo icona)</text>
+
+    <!-- Libro -->
+    <g>
+      <text x="22" y="80" font-family="Arial" font-size="11" fill="#666">Libro</text>
+      <rect x="0" y="0" width="55" height="55" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="5"/>
+      <rect x="12" y="10" width="30" height="35" fill="#E8DCC8" rx="2"/>
+      <line x1="27" y1="10" x2="27" y2="45" stroke="#3D2914" stroke-width="3"/>
+    </g>
+
+    <!-- Rotolo -->
+    <g transform="translate(80, 0)">
+      <text x="22" y="80" font-family="Arial" font-size="11" fill="#666">Rotolo</text>
+      <rect x="0" y="0" width="55" height="55" fill="#5C4033" stroke="#B8860B" stroke-width="2" rx="5"/>
+      <ellipse cx="20" cy="28" rx="6" ry="14" fill="#E5D9C3" stroke="#8B7355" stroke-width="1"/>
+      <rect x="20" y="16" width="15" height="24" fill="#E5D9C3"/>
+      <ellipse cx="35" cy="28" rx="4" ry="12" fill="#D4C5A9" stroke="#8B7355" stroke-width="1"/>
+    </g>
+
+    <!-- Occhio -->
+    <g transform="translate(160, 0)">
+      <text x="22" y="80" font-family="Arial" font-size="11" fill="#666">Occhio</text>
+      <rect x="0" y="0" width="55" height="55" fill="#2E0854" stroke="#9370DB" stroke-width="2" rx="5"/>
+      <ellipse cx="28" cy="28" rx="16" ry="11" fill="none" stroke="#9370DB" stroke-width="2"/>
+      <circle cx="28" cy="28" r="6" fill="#9370DB"/>
+    </g>
+
+    <!-- Tentacolo/Runa -->
+    <g transform="translate(240, 0)">
+      <text x="22" y="80" font-family="Arial" font-size="11" fill="#666">Runa</text>
+      <rect x="0" y="0" width="55" height="55" fill="#1C3A3A" stroke="#4B0082" stroke-width="2" rx="5"/>
+      <!-- Simbolo Elder Sign -->
+      <path d="M28,10 L28,45 M15,20 L41,20 M15,36 L41,36 M20,15 L36,41 M36,15 L20,41" fill="none" stroke="#9370DB" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ========== NOTE ========== -->
+  <g transform="translate(800, 320)">
+    <rect x="0" y="0" width="500" height="400" fill="#1a1208" stroke="#5C4033" stroke-width="2" rx="10"/>
+    <text x="250" y="40" font-family="Georgia, serif" font-size="20" fill="#DAA520" text-anchor="middle" font-weight="bold">NOTE DI DESIGN</text>
+    <line x1="30" y1="60" x2="470" y2="60" stroke="#5C4033" stroke-width="1"/>
+
+    <text font-family="Georgia, serif" font-size="14" fill="#C4B598">
+      <tspan x="30" y="100" font-weight="bold" fill="#DAA520">Posizione:</tspan>
+      <tspan x="30" dy="25">Barra superiore, subito dopo l'inventario</tspan>
+      <tspan x="30" dy="20">Facile accesso senza coprire l'area di gioco</tspan>
+
+      <tspan x="30" dy="40" font-weight="bold" fill="#DAA520">Feedback visivo:</tspan>
+      <tspan x="30" dy="25">- Hover: bordo illuminato + leggero glow</tspan>
+      <tspan x="30" dy="20">- Badge rosso per nuovi contenuti</tspan>
+      <tspan x="30" dy="20">- Pressed: leggero affondamento</tspan>
+
+      <tspan x="30" dy="40" font-weight="bold" fill="#DAA520">Coerenza stilistica:</tspan>
+      <tspan x="30" dy="25">- Variante 1: classico, si integra con UI esistente</tspan>
+      <tspan x="30" dy="20">- Variante 2: richiama l'Oman, più tematico</tspan>
+      <tspan x="30" dy="20">- Variante 3: lovecraftiano, più distintivo</tspan>
+
+      <tspan x="30" dy="40" font-weight="bold" fill="#DAA520">Raccomandazione:</tspan>
+      <tspan x="30" dy="25" fill="#FFD700">Variante 1 per coerenza con UI LucasArts</tspan>
+      <tspan x="30" dy="20" fill="#FFD700">Variante 3 se volete enfatizzare l'horror</tspan>
+    </text>
+  </g>
+
+  <!-- Legenda -->
+  <g transform="translate(20, 1020)">
+    <text font-family="Arial, sans-serif" font-size="12" fill="#666">
+      <tspan x="0">PULSANTE DIARIO - Varianti di stile e stati interattivi | Posizionamento consigliato nella barra UI superiore</tspan>
+    </text>
+  </g>
+
+</svg>

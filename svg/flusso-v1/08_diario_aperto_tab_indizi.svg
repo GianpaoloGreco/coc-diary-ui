@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <pattern id="parchmentTexture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#E8DCC8"/>
+    </pattern>
+    <linearGradient id="leatherGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3D2914"/>
+      <stop offset="50%" style="stop-color:#5C4033"/>
+      <stop offset="100%" style="stop-color:#3D2914"/>
+    </linearGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#0a0a0a"/>
+
+  <g id="diaryOpen" filter="url(#dropShadow)">
+    <rect x="160" y="60" width="1600" height="960" fill="url(#leatherGradient)" rx="15"/>
+    <rect x="945" y="60" width="30" height="960" fill="#2a1f14"/>
+
+    <!-- ========== PAGINA SINISTRA (INDIZIO SELEZIONATO) ========== -->
+    <rect x="180" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="200" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <text x="560" y="150" font-family="Georgia, serif" font-size="32" fill="#3D2914" text-anchor="middle" font-weight="bold">CAPITOLO III</text>
+    <line x1="350" y1="170" x2="770" y2="170" stroke="#8B7355" stroke-width="1"/>
+
+    <!-- INDIZIO SELEZIONATO - La Statuetta -->
+    <g transform="translate(230, 200)">
+      <!-- Immagine oggetto -->
+      <rect x="0" y="0" width="300" height="300" fill="#1C3A3A" stroke="#DAA520" stroke-width="4"/>
+      <rect x="10" y="10" width="280" height="280" fill="#0f1f1f"/>
+      <text x="150" y="140" font-family="Georgia, serif" font-size="16" fill="#3D5050" text-anchor="middle">[IMMAGINE OGGETTO]</text>
+      <text x="150" y="170" font-family="Georgia, serif" font-size="14" fill="#2D4545" text-anchor="middle">La Statuetta di Cthulhu</text>
+      <!-- Icona zoom -->
+      <g transform="translate(250, 250)" style="cursor: pointer;">
+        <circle cx="0" cy="0" r="20" fill="#3D2914" stroke="#DAA520" stroke-width="2"/>
+        <circle cx="-3" cy="-3" r="8" fill="none" stroke="#DAA520" stroke-width="2"/>
+        <line x1="3" y1="3" x2="10" y2="10" stroke="#DAA520" stroke-width="2"/>
+      </g>
+
+      <!-- Info dettagliate -->
+      <g transform="translate(320, 0)">
+        <text x="0" y="30" font-family="Georgia, serif" font-size="24" fill="#3D2914" font-weight="bold">La Statuetta</text>
+        <text x="0" y="55" font-family="Georgia, serif" font-size="14" fill="#8B7355" font-style="italic">Oggetto misterioso</text>
+
+        <line x1="0" y1="70" x2="320" y2="70" stroke="#C4B598" stroke-width="1"/>
+
+        <!-- Tipo -->
+        <text x="0" y="100" font-family="Georgia, serif" font-size="13" fill="#5C4033" font-weight="bold">TIPO:</text>
+        <text x="60" y="100" font-family="Georgia, serif" font-size="13" fill="#3D2914">Artefatto antico</text>
+
+        <!-- Ottenuto -->
+        <text x="0" y="130" font-family="Georgia, serif" font-size="13" fill="#5C4033" font-weight="bold">OTTENUTO:</text>
+        <text x="90" y="130" font-family="Georgia, serif" font-size="13" fill="#3D2914">Capitolo I</text>
+
+        <!-- Importanza -->
+        <text x="0" y="160" font-family="Georgia, serif" font-size="13" fill="#5C4033" font-weight="bold">IMPORTANZA:</text>
+        <g transform="translate(0, 170)">
+          <rect x="0" y="0" width="150" height="15" fill="#D4C5A9" stroke="#8B7355" stroke-width="1" rx="7"/>
+          <rect x="0" y="0" width="150" height="15" fill="#8B0000" rx="7"/>
+          <text x="170" y="12" font-family="Georgia, serif" font-size="12" fill="#8B0000" font-weight="bold">CRITICO</text>
+        </g>
+
+        <!-- Collegato a -->
+        <text x="0" y="220" font-family="Georgia, serif" font-size="13" fill="#5C4033" font-weight="bold">COLLEGATO A:</text>
+        <g transform="translate(0, 230)">
+          <rect x="0" y="0" width="100" height="25" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="12"/>
+          <text x="50" y="17" font-family="Georgia, serif" font-size="11" fill="#DAA520" text-anchor="middle">Il Padre</text>
+        </g>
+        <g transform="translate(110, 230)">
+          <rect x="0" y="0" width="100" height="25" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="12"/>
+          <text x="50" y="17" font-family="Georgia, serif" font-size="11" fill="#DAA520" text-anchor="middle">Yog-Sothoth</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Descrizione estesa -->
+    <rect x="230" y="530" width="660" height="300" fill="#D4C5A9" stroke="#8B7355" stroke-width="1"/>
+    <text x="250" y="560" font-family="Georgia, serif" font-size="14" fill="#5C4033" font-weight="bold">DESCRIZIONE:</text>
+    <text font-family="Georgia, serif" font-size="13" fill="#3D2914">
+      <tspan x="250" y="590">Una statuetta di pietra verde scuro, raffigurante una</tspan>
+      <tspan x="250" dy="22">creatura con corpo antropoide e testa cefalopode.</tspan>
+      <tspan x="250" dy="22">Il padre di Rabian gliela consegnò prima di scomparire,</tspan>
+      <tspan x="250" dy="22">sussurrando un avvertimento criptico su una "scelta difficile".</tspan>
+    </text>
+
+    <text x="250" y="700" font-family="Georgia, serif" font-size="14" fill="#5C4033" font-weight="bold">NOTE DI RABIAN:</text>
+    <text font-family="Georgia, serif" font-size="13" fill="#5C4033" font-style="italic">
+      <tspan x="250" y="725">"La statuetta sembra... viva. A volte, nelle notti senza</tspan>
+      <tspan x="250" dy="22">luna, giurerei di averla sentita pulsare. Devo scoprire</tspan>
+      <tspan x="250" dy="22">cosa sapeva mio padre su questo oggetto."</tspan>
+    </text>
+
+    <!-- Angoli -->
+    <path d="M200,100 L240,100 L200,140 Z" fill="#8B7355"/>
+    <path d="M920,100 L880,100 L920,140 Z" fill="#8B7355"/>
+    <path d="M200,960 L240,960 L200,920 Z" fill="#8B7355"/>
+    <path d="M920,960 L880,960 L920,920 Z" fill="#8B7355"/>
+
+    <!-- ========== PAGINA DESTRA (LISTA INDIZI) ========== -->
+    <rect x="980" y="80" width="760" height="900" fill="url(#parchmentTexture)" rx="5"/>
+    <rect x="1000" y="100" width="720" height="860" fill="none" stroke="#8B7355" stroke-width="2"/>
+
+    <!-- TAB SEZIONI -->
+    <g id="sectionTabs" transform="translate(1020, 120)">
+      <g><rect x="0" y="0" width="120" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="60" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">STORIA</text></g>
+      <g transform="translate(130, 0)"><rect x="0" y="0" width="120" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="60" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">GALLERIA</text></g>
+      <g transform="translate(260, 0)"><rect x="0" y="0" width="130" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="65" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">PERSONAGGI</text></g>
+      <g transform="translate(400, 0)"><rect x="0" y="0" width="100" height="40" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="5"/><text x="50" y="27" font-family="Georgia, serif" font-size="13" fill="#8B7355" text-anchor="middle">LUOGHI</text></g>
+      <!-- Tab Indizi (ATTIVO) -->
+      <g transform="translate(510, 0)"><rect x="0" y="0" width="100" height="40" fill="#5C4033" stroke="#DAA520" stroke-width="2" rx="5"/><text x="50" y="27" font-family="Georgia, serif" font-size="13" fill="#E8DCC8" text-anchor="middle" font-weight="bold">INDIZI</text></g>
+    </g>
+
+    <line x1="1020" y1="175" x2="1700" y2="175" stroke="#8B7355" stroke-width="1"/>
+    <text x="1360" y="210" font-family="Georgia, serif" font-size="20" fill="#3D2914" text-anchor="middle" font-weight="bold">Indizi raccolti</text>
+
+    <!-- Filtri categoria -->
+    <g transform="translate(1050, 230)">
+      <rect x="0" y="0" width="80" height="30" fill="#5C4033" stroke="#DAA520" stroke-width="2" rx="15"/>
+      <text x="40" y="21" font-family="Georgia, serif" font-size="11" fill="#E8DCC8" text-anchor="middle">TUTTI</text>
+
+      <rect x="90" y="0" width="100" height="30" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="15"/>
+      <text x="140" y="21" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">OGGETTI</text>
+
+      <rect x="200" y="0" width="100" height="30" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="15"/>
+      <text x="250" y="21" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">DOCUMENTI</text>
+
+      <rect x="310" y="0" width="100" height="30" fill="#3D2914" stroke="#5C4033" stroke-width="1" rx="15"/>
+      <text x="360" y="21" font-family="Georgia, serif" font-size="11" fill="#8B7355" text-anchor="middle">SIMBOLI</text>
+    </g>
+
+    <!-- LISTA INDIZI -->
+    <g transform="translate(1030, 280)">
+      <!-- Indizio 1: Statuetta (SELEZIONATO) -->
+      <g style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="80" fill="#5C4033" stroke="#DAA520" stroke-width="3" rx="8"/>
+        <rect x="10" y="10" width="60" height="60" fill="#1C3A3A" stroke="#DAA520" stroke-width="2"/>
+        <text x="40" y="45" font-family="Georgia" font-size="10" fill="#4B6060" text-anchor="middle">[img]</text>
+        <text x="90" y="32" font-family="Georgia, serif" font-size="15" fill="#E8DCC8" font-weight="bold">La Statuetta di Cthulhu</text>
+        <text x="90" y="52" font-family="Georgia, serif" font-size="11" fill="#C4B598">Artefatto antico - Cap. I</text>
+        <!-- Importanza -->
+        <rect x="500" y="25" width="80" height="25" fill="#8B0000" rx="12"/>
+        <text x="540" y="42" font-family="Georgia" font-size="10" fill="#fff" text-anchor="middle">CRITICO</text>
+        <!-- Nuovo badge -->
+        <circle cx="610" cy="20" r="12" fill="#8B0000"/>
+        <text x="610" y="25" font-family="Arial" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">!</text>
+      </g>
+
+      <!-- Indizio 2: Pergamena -->
+      <g transform="translate(0, 95)" style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="80" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="60" height="60" fill="#D4C5A9"/>
+        <text x="40" y="45" font-family="Georgia" font-size="10" fill="#8B7355" text-anchor="middle">[doc]</text>
+        <text x="90" y="32" font-family="Georgia, serif" font-size="15" fill="#DAA520" font-weight="bold">Pergamena del custode</text>
+        <text x="90" y="52" font-family="Georgia, serif" font-size="11" fill="#C4B598">Documento - Cap. III</text>
+        <rect x="500" y="25" width="80" height="25" fill="#DAA520" rx="12"/>
+        <text x="540" y="42" font-family="Georgia" font-size="10" fill="#3D2914" text-anchor="middle">IMPORTANTE</text>
+      </g>
+
+      <!-- Indizio 3: Simbolo -->
+      <g transform="translate(0, 190)" style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="80" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="60" height="60" fill="#2E0854"/>
+        <text x="40" y="45" font-family="Georgia" font-size="16" fill="#9370DB" text-anchor="middle">&#x2625;</text>
+        <text x="90" y="32" font-family="Georgia, serif" font-size="15" fill="#DAA520" font-weight="bold">Simbolo arcano</text>
+        <text x="90" y="52" font-family="Georgia, serif" font-size="11" fill="#C4B598">Simbolo - Cap. III</text>
+        <rect x="500" y="25" width="80" height="25" fill="#4B0082" rx="12"/>
+        <text x="540" y="42" font-family="Georgia" font-size="10" fill="#DDA0DD" text-anchor="middle">ARCANO</text>
+      </g>
+
+      <!-- Indizio 4: Meccanismo -->
+      <g transform="translate(0, 285)" style="cursor: pointer;">
+        <rect x="0" y="0" width="640" height="80" fill="#3D2914" stroke="#8B7355" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="60" height="60" fill="#1a1208"/>
+        <text x="40" y="45" font-family="Georgia" font-size="10" fill="#5C4033" text-anchor="middle">[img]</text>
+        <text x="90" y="32" font-family="Georgia, serif" font-size="15" fill="#DAA520" font-weight="bold">Frammento di meccanismo</text>
+        <text x="90" y="52" font-family="Georgia, serif" font-size="11" fill="#C4B598">Oggetto - Cap. III</text>
+        <rect x="500" y="25" width="80" height="25" fill="#228B22" rx="12"/>
+        <text x="540" y="42" font-family="Georgia" font-size="10" fill="#fff" text-anchor="middle">UTILE</text>
+      </g>
+
+      <!-- Indizio bloccato -->
+      <g transform="translate(0, 380)" style="cursor: pointer;" opacity="0.5">
+        <rect x="0" y="0" width="640" height="80" fill="#2a1f14" stroke="#3D2914" stroke-width="2" rx="8"/>
+        <rect x="10" y="10" width="60" height="60" fill="#1a1208"/>
+        <text x="40" y="45" font-family="Georgia" font-size="20" fill="#3D2914" text-anchor="middle">?</text>
+        <text x="90" y="32" font-family="Georgia, serif" font-size="15" fill="#5C4033" font-weight="bold">???</text>
+        <text x="90" y="52" font-family="Georgia, serif" font-size="11" fill="#3D2914">Indizio non ancora scoperto</text>
+      </g>
+    </g>
+
+    <!-- Contatore -->
+    <text x="1360" y="730" font-family="Georgia, serif" font-size="14" fill="#5C4033" text-anchor="middle">4 di 5 indizi raccolti nel Capitolo III</text>
+
+    <!-- Angoli -->
+    <path d="M1000,100 L1040,100 L1000,140 Z" fill="#8B7355"/>
+    <path d="M1720,100 L1680,100 L1720,140 Z" fill="#8B7355"/>
+    <path d="M1000,960 L1040,960 L1000,920 Z" fill="#8B7355"/>
+    <path d="M1720,960 L1680,960 L1720,920 Z" fill="#8B7355"/>
+
+    <!-- Tab capitoli -->
+    <g id="chapterTabs">
+      <g transform="translate(130, 180)"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">I</text></g>
+      <g transform="translate(130, 260)"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#5C4033" stroke="#8B7355" stroke-width="1"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#DAA520" font-weight="bold">II</text></g>
+      <g transform="translate(130, 340)"><path d="M0,0 L-60,10 L-60,55 L0,65 Z" fill="#8B7355" stroke="#DAA520" stroke-width="3"/><text x="-38" y="40" font-family="Georgia, serif" font-size="18" fill="#E8DCC8" font-weight="bold">III</text></g>
+      <g transform="translate(130, 420)" opacity="0.5"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#3D2914"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#5C4033" font-weight="bold">IV</text></g>
+      <g transform="translate(130, 500)" opacity="0.5"><path d="M0,0 L-50,10 L-50,55 L0,65 Z" fill="#3D2914"/><text x="-32" y="40" font-family="Georgia, serif" font-size="18" fill="#5C4033" font-weight="bold">V</text></g>
+    </g>
+
+    <!-- Chiusura -->
+    <g transform="translate(1720, 90)" style="cursor: pointer;">
+      <circle cx="0" cy="0" r="25" fill="#8B0000" stroke="#DAA520" stroke-width="2"/>
+      <line x1="-10" y1="-10" x2="10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="-10" x2="-10" y2="10" stroke="#E8DCC8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <rect x="20" y="1030" width="550" height="30" fill="#000" opacity="0.7" rx="5"/>
+  <text x="40" y="1052" font-family="Arial, sans-serif" font-size="14" fill="#DAA520">STATO: Diario APERTO - Tab INDIZI - Dettaglio oggetto + lista filtri</text>
+
+</svg>
