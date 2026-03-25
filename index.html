@@ -277,9 +277,10 @@
 <nav>
     <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="#proposte">Proposte</a></li>
-        <li><a href="#flusso-v1">Libro Antico</a></li>
-        <li><a href="#flusso-v2">Manoscritto v2</a></li>
+        <li><a href="#chosen">Chosen Style</a></li>
+        <li><a href="#flusso-v1">Flow v1</a></li>
+        <li><a href="#flusso-v2">Flow v2</a></li>
+        <li><a href="#backlog">Backlog</a></li>
     </ul>
 </nav>
 
@@ -288,59 +289,34 @@
     <h1>Curse of Chaos</h1>
     <div class="subtitle">Diary UI — Design System</div>
     <div class="divider"></div>
-    <div class="meta">
-        <span>26 Screens</span>
-        <span>3 Style Proposals</span>
-        <span>2 Full Flows</span>
-    </div>
 </div>
 
-<!-- PROPOSTE -->
-<section id="proposte">
-    <h2>Style Proposals</h2>
-    <p class="section-desc">Three visual directions explored for the in-game diary: Ancient Book, Papyrus Scroll, and Arcane Codex.</p>
+<!-- CHOSEN STYLE -->
+<section id="chosen">
+    <h2>Chosen Style — Ancient Book</h2>
+    <p class="section-desc">RDR2/Uncharted-inspired. Two open pages with motion comics, narrative text, chapter tabs and completion tracking.</p>
 
-    <div class="card-grid grid-2">
+    <div class="card-grid">
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
                 <img src="svg/proposte/01_diario_libro_antico.svg" alt="Libro Antico" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Ancient Book</h3>
-                <p>RDR2/Uncharted-inspired. Two open pages: left for motion comic, right for narrative text. Chapter tabs with completion icons.</p>
-                <span class="tag">Proposal A</span>
+                <h3>Ancient Book — Concept</h3>
+                <p>Left page for motion comic, right page for narrative text. Brown/gold palette (#3D2914, #DAA520, #E8DCC8). Chapter tabs with completion icons on the side.</p>
+                <span class="tag">Selected</span>
             </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/02_diario_papiro_rotolo.svg" alt="Papiro Rotolo" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>Papyrus Scroll</h3>
-                <p>Ancient Oman-inspired. Three-column layout with decorated wooden rods. Horizontal section tabs with progression dots.</p>
-                <span class="tag">Proposal B</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/03_diario_codex_arcano.svg" alt="Codex Arcano" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>Arcane Codex</h3>
-                <p>Lovecraftian cosmic style. Sidebar with chapter list, eldritch symbols. Purple/blue palette with star decorations.</p>
-                <span class="tag">Proposal C</span>
-            </div>
-        </div>
-
+    <div class="card-grid grid-2" style="margin-top:3rem">
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
                 <img src="svg/proposte/04_pulsante_diario_varianti.svg" alt="Pulsante Varianti" loading="lazy">
             </div>
             <div class="card-info">
                 <h3>Button Variants</h3>
-                <p>Four button styles (Classic Book, Scroll, Arcane, Minimal) each shown in 4 states: Normal, Hover, Notification, Pressed.</p>
+                <p>Four button styles each shown in 4 states: Normal, Hover, Notification, Pressed.</p>
                 <span class="tag">UI Components</span>
             </div>
         </div>
@@ -351,7 +327,7 @@
             </div>
             <div class="card-info">
                 <h3>Navigation Structure</h3>
-                <p>Reference for section navigation: chapter navigation, content tabs, story layout, user flow, auto-update system.</p>
+                <p>Chapter navigation, content tabs, story layout, user flow, auto-update system.</p>
                 <span class="tag">Information Architecture</span>
             </div>
         </div>
@@ -591,9 +567,40 @@
     </div>
 </section>
 
+<div class="section-sep"><div class="ornament">&#10038; &#10038; &#10038;</div></div>
+
+<!-- BACKLOG -->
+<section id="backlog">
+    <h2>Backlog — Discarded Proposals</h2>
+    <p class="section-desc">Alternative visual directions explored during the design phase. Not selected for production.</p>
+
+    <div class="card-grid grid-2">
+        <div class="card" style="opacity:0.7">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/proposte/02_diario_papiro_rotolo.svg" alt="Papiro Rotolo" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>Papyrus Scroll</h3>
+                <p>Ancient Oman-inspired. Three-column layout with decorated wooden rods. Horizontal section tabs with progression dots.</p>
+                <span class="tag" style="border-color:#555;color:#888">Discarded</span>
+            </div>
+        </div>
+
+        <div class="card" style="opacity:0.7">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/proposte/03_diario_codex_arcano.svg" alt="Codex Arcano" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>Arcane Codex</h3>
+                <p>Lovecraftian cosmic style. Sidebar with chapter list, eldritch symbols. Purple/blue palette with star decorations.</p>
+                <span class="tag" style="border-color:#555;color:#888">Discarded</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer>
     <p>Chronicle of Innsmouth: Curse of Chaos — Diary UI Design by <a href="https://github.com/GianpaoloGreco">PsychoDev / Addictive Health</a></p>
-    <p style="margin-top:0.5rem">26 screens &middot; SVG wireframes &middot; 2025</p>
 </footer>
 
 <!-- OVERLAY -->
