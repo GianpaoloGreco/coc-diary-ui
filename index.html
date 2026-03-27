@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,6 @@
             --parchment: #E8DCC8;
             --text: #c9b99a;
             --text-dim: #7a6f5f;
-            --accent: #a0522d;
         }
 
         body {
@@ -28,7 +27,6 @@
             line-height: 1.6;
         }
 
-        /* NAV */
         nav {
             position: fixed;
             top: 0;
@@ -64,7 +62,6 @@
             border-bottom-color: var(--gold);
         }
 
-        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -97,19 +94,6 @@
             font-style: italic;
             position: relative;
         }
-        .hero .meta {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            position: relative;
-        }
-        .hero .meta span {
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border: 1px solid var(--gold-dim);
-            border-radius: 2px;
-            margin: 0.3rem;
-        }
         .divider {
             width: 120px;
             height: 2px;
@@ -118,7 +102,6 @@
             position: relative;
         }
 
-        /* SECTIONS */
         section {
             max-width: 1400px;
             margin: 0 auto;
@@ -141,7 +124,6 @@
             margin-right: auto;
         }
 
-        /* SVG CARDS */
         .card-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -164,8 +146,7 @@
             display: block;
             background: var(--surface2);
         }
-        .card-img img,
-        .card-img object {
+        .card-img img {
             width: 100%;
             height: auto;
             display: block;
@@ -195,11 +176,43 @@
             font-family: 'Cinzel', serif;
         }
 
-        /* GRID LAYOUTS */
         .grid-2 { grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
 
-        /* FULLSCREEN OVERLAY */
+        /* Mappa flusso grande */
+        .flowmap {
+            background: var(--surface);
+            border: 2px solid var(--gold-dim);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .flowmap:hover {
+            border-color: var(--gold);
+            box-shadow: 0 4px 40px rgba(218,165,32,0.12);
+        }
+        .flowmap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .flowmap-caption {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #2a2520;
+            text-align: center;
+        }
+        .flowmap-caption h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        .flowmap-caption p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-top: 0.3rem;
+        }
+
         .overlay {
             display: none;
             position: fixed;
@@ -239,7 +252,6 @@
             text-align: center;
         }
 
-        /* SECTION SEPARATORS */
         .section-sep {
             text-align: center;
             padding: 3rem 2rem;
@@ -250,7 +262,6 @@
             letter-spacing: 1rem;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 3rem 2rem;
@@ -261,13 +272,11 @@
         footer a { color: var(--gold-dim); text-decoration: none; }
         footer a:hover { color: var(--gold); }
 
-        /* SCROLL */
         html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 
-        /* RESPONSIVE */
         @media (max-width: 600px) {
             nav a { padding: 0.8rem 0.8rem; font-size: 0.7rem; }
-            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
             section { padding: 3rem 1rem; }
         }
     </style>
@@ -277,10 +286,9 @@
 <nav>
     <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="#chosen">Chosen Style</a></li>
-        <li><a href="#flusso-v1">Flow v1</a></li>
-        <li><a href="#flusso-v2">Flow v2</a></li>
-        <li><a href="#backlog">Backlog</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#flusso-v1">Flusso v1</a></li>
+        <li><a href="#flusso-v2">Flusso v2</a></li>
     </ul>
 </nav>
 
@@ -291,20 +299,19 @@
     <div class="divider"></div>
 </div>
 
-<!-- CHOSEN STYLE -->
-<section id="chosen">
-    <h2>Chosen Style — Ancient Book</h2>
-    <p class="section-desc">RDR2/Uncharted-inspired. Two open pages with motion comics, narrative text, chapter tabs and completion tracking.</p>
+<!-- CONCEPT -->
+<section id="concept">
+    <h2>Concept — Libro Antico</h2>
+    <p class="section-desc">Stile ispirato a RDR2 e Uncharted. Due pagine aperte: a sinistra motion comic, a destra testo narrativo. Tab capitoli con icone di completamento.</p>
 
     <div class="card-grid">
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/01_diario_libro_antico.svg" alt="Libro Antico" loading="lazy">
+                <img src="svg/proposte/01_diario_libro_antico.svg" alt="Libro Antico — Concept" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Ancient Book — Concept</h3>
-                <p>Left page for motion comic, right page for narrative text. Brown/gold palette (#3D2914, #DAA520, #E8DCC8). Chapter tabs with completion icons on the side.</p>
-                <span class="tag">Selected</span>
+                <h3>Libro Antico — Concept</h3>
+                <p>Palette marrone/oro (#3D2914, #DAA520, #E8DCC8). Navigazione pagine con frecce, tab capitoli laterali.</p>
             </div>
         </div>
     </div>
@@ -312,23 +319,23 @@
     <div class="card-grid grid-2" style="margin-top:3rem">
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/04_pulsante_diario_varianti.svg" alt="Pulsante Varianti" loading="lazy">
+                <img src="svg/proposte/04_pulsante_diario_varianti.svg" alt="Varianti Pulsante" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Button Variants</h3>
-                <p>Four button styles each shown in 4 states: Normal, Hover, Notification, Pressed.</p>
-                <span class="tag">UI Components</span>
+                <h3>Varianti Pulsante</h3>
+                <p>Quattro stili di pulsante, ognuno in 4 stati: Normale, Hover, Notifica, Premuto.</p>
+                <span class="tag">Componenti UI</span>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/05_diario_navigazione_sezioni.svg" alt="Navigazione Sezioni" loading="lazy">
+                <img src="svg/proposte/05_diario_navigazione_sezioni.svg" alt="Struttura Navigazione" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Navigation Structure</h3>
-                <p>Chapter navigation, content tabs, story layout, user flow, auto-update system.</p>
-                <span class="tag">Information Architecture</span>
+                <h3>Struttura Navigazione</h3>
+                <p>Navigazione capitoli, tab contenuto, layout storia, flusso utente, aggiornamento automatico.</p>
+                <span class="tag">Architettura</span>
             </div>
         </div>
     </div>
@@ -338,138 +345,136 @@
 
 <!-- FLUSSO V1 -->
 <section id="flusso-v1">
-    <h2>Ancient Book — Full Flow</h2>
-    <p class="section-desc">Complete interaction flow from gameplay to diary open/close, with all tabs and chapter navigation. 13 screens.</p>
+    <h2>Flusso Completo — Libro Antico</h2>
+    <p class="section-desc">Flusso di interazione completo dal gameplay all'apertura/chiusura del diario, con tutti i tab e la navigazione capitoli.</p>
+
+    <!-- MAPPA FLUSSO GRANDE -->
+    <div class="flowmap" onclick="openOverlay(this)">
+        <img src="svg/flusso-v1/12_MAPPA_FLUSSO_COMPLETO.svg" alt="Mappa Flusso Completo" loading="lazy">
+        <div class="flowmap-caption">
+            <h3>Mappa Flusso Completo</h3>
+            <p>Gameplay &rarr; Apertura &rarr; Tab sezioni &rarr; Navigazione capitoli &rarr; Chiusura. Clicca per ingrandire.</p>
+        </div>
+    </div>
 
     <div class="card-grid grid-2">
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/00_gioco_diario_chiuso.svg" alt="Gameplay - Diary Closed" loading="lazy">
+                <img src="svg/flusso-v1/00_gioco_diario_chiuso.svg" alt="Gameplay" loading="lazy">
             </div>
             <div class="card-info">
                 <h3>00 — Gameplay</h3>
-                <p>Game screen with diary closed. Top bar with inventory and DIARY button. LucasArts verb bar at bottom. Kabar scenario.</p>
+                <p>Schermata di gioco con diario chiuso. Barra inventario in alto, pulsante DIARIO, barra verbi LucasArts in basso.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/01_pulsante_hover.svg" alt="Button Hover" loading="lazy">
+                <img src="svg/flusso-v1/01_pulsante_hover.svg" alt="Pulsante Hover" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>01 — Button Hover</h3>
-                <p>Hover state with gold border glow. Tooltip shows "Open diary (D)" shortcut.</p>
+                <h3>01 — Pulsante Hover</h3>
+                <p>Stato hover con bordo dorato luminoso. Tooltip "Apri il diario (D)".</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/02_pulsante_notifica.svg" alt="Button Notification" loading="lazy">
+                <img src="svg/flusso-v1/02_pulsante_notifica.svg" alt="Notifica" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>02 — Notification</h3>
-                <p>Badge with count (2). Temporary popup "Diary updated" with new entry preview. Pulsing animation.</p>
+                <h3>02 — Notifica</h3>
+                <p>Badge con contatore (2). Popup temporaneo "Diario aggiornato" con anteprima nuova voce. Animazione pulsante.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/03_diario_apertura_transizione.svg" alt="Opening Transition" loading="lazy">
+                <img src="svg/flusso-v1/03_diario_apertura_transizione.svg" alt="Transizione Apertura" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>03 — Opening Transition</h3>
-                <p>Book partially open, darkened background. Loading bar animation ~0.5s.</p>
+                <h3>03 — Transizione Apertura</h3>
+                <p>Libro parzialmente aperto, sfondo oscurato. Animazione ~0.5s.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/04_diario_aperto_tab_storia.svg" alt="Tab Story" loading="lazy">
+                <img src="svg/flusso-v1/04_diario_aperto_tab_storia.svg" alt="Tab Storia" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>04 — Tab: Story</h3>
-                <p>Left page: motion comic (2/4) with controls. Right page: narrative text for Chapter III with scrollbar.</p>
+                <h3>04 — Tab: Storia</h3>
+                <p>Pagina sinistra: motion comic (2/4) con controlli. Pagina destra: testo narrativo Capitolo III con scrollbar.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/05_diario_aperto_tab_galleria.svg" alt="Tab Gallery" loading="lazy">
+                <img src="svg/flusso-v1/05_diario_aperto_tab_galleria.svg" alt="Tab Galleria" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>05 — Tab: Gallery</h3>
-                <p>Left: selected image. Right: 3x3 thumbnail grid (4 of 8 unlocked). Progress bar.</p>
+                <h3>05 — Tab: Galleria</h3>
+                <p>Sinistra: immagine selezionata. Destra: griglia thumbnail 3x3 (4 di 8 sbloccate). Barra progresso.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/06_diario_aperto_tab_personaggi.svg" alt="Tab Characters" loading="lazy">
+                <img src="svg/flusso-v1/06_diario_aperto_tab_personaggi.svg" alt="Tab Personaggi" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>06 — Tab: Characters</h3>
-                <p>Left: Canus portrait with relationship, role, first encounter, background. Right: character card list.</p>
+                <h3>06 — Tab: Personaggi</h3>
+                <p>Sinistra: ritratto Canus con relazione, ruolo, primo incontro, background. Destra: lista schede personaggi.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/07_diario_aperto_tab_luoghi.svg" alt="Tab Places" loading="lazy">
+                <img src="svg/flusso-v1/07_diario_aperto_tab_luoghi.svg" alt="Tab Luoghi" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>07 — Tab: Places</h3>
-                <p>Left: stylized Kabar map with 4 locations, compass rose, legend. Right: handwritten location notes.</p>
+                <h3>07 — Tab: Luoghi</h3>
+                <p>Sinistra: mappa stilizzata di Kabar con 4 location, rosa dei venti, legenda. Destra: note scritte a mano.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/08_diario_aperto_tab_indizi.svg" alt="Tab Clues" loading="lazy">
+                <img src="svg/flusso-v1/08_diario_aperto_tab_indizi.svg" alt="Tab Indizi" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>08 — Tab: Clues</h3>
-                <p>Left: statuette card with type, source, importance, connections. Right: filter list (All, Objects, Documents, Symbols).</p>
+                <h3>08 — Tab: Indizi</h3>
+                <p>Sinistra: scheda statuetta con tipo, origine, importanza, collegamenti. Destra: lista filtri (Tutti, Oggetti, Documenti, Simboli).</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/09_diario_chiusura_transizione.svg" alt="Closing Transition" loading="lazy">
+                <img src="svg/flusso-v1/09_diario_chiusura_transizione.svg" alt="Transizione Chiusura" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>09 — Closing Transition</h3>
-                <p>Reverse of opening. Book closing animation, background brightening.</p>
+                <h3>09 — Transizione Chiusura</h3>
+                <p>Inverso dell'apertura. Libro che si chiude, sfondo che si schiarisce.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/10_cambio_capitolo.svg" alt="Chapter Switch" loading="lazy">
+                <img src="svg/flusso-v1/10_cambio_capitolo.svg" alt="Cambio Capitolo" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>10 — Chapter Switch</h3>
-                <p>Navigating from Chapter III to Chapter II. Different content, section 1 of 4.</p>
+                <h3>10 — Cambio Capitolo</h3>
+                <p>Navigazione da Capitolo III a Capitolo II. Contenuto diverso, sezione 1 di 4.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/11_capitolo_bloccato.svg" alt="Locked Chapter" loading="lazy">
+                <img src="svg/flusso-v1/11_capitolo_bloccato.svg" alt="Capitolo Bloccato" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>11 — Locked Chapter</h3>
-                <p>Chapter IV locked. Large padlock, requirements to unlock, 60% progress bar, cryptic teaser.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v1/12_MAPPA_FLUSSO_COMPLETO.svg" alt="Complete Flow Map" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>12 — Complete Flow Map</h3>
-                <p>Full interaction map: Gameplay → Opening → Tab sections → Chapter navigation → Closing. Timing and flow arrows.</p>
-                <span class="tag">Flow Diagram</span>
+                <h3>11 — Capitolo Bloccato</h3>
+                <p>Capitolo IV bloccato. Lucchetto, requisiti di sblocco, barra progresso 60%, teaser criptico.</p>
             </div>
         </div>
     </div>
@@ -479,128 +484,94 @@
 
 <!-- FLUSSO V2 -->
 <section id="flusso-v2">
-    <h2>Manuscript v2 — Full Flow</h2>
-    <p class="section-desc">Refined version with handwritten aesthetic. Ink stains, fabric bookmarks, hand-drawn maps. No modern UI elements. 8 screens.</p>
+    <h2>Flusso Completo — Manoscritto v2</h2>
+    <p class="section-desc">Versione raffinata con estetica scritta a mano. Macchie d'inchiostro, segnalibri di stoffa, mappe disegnate. Nessun elemento UI moderno.</p>
 
-    <div class="card-grid grid-2">
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/01_diario_aperto_storia.svg" alt="Manuscript - Story" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>01 — Story</h3>
-                <p>Ancient manuscript style (500 BC). Handwritten text, margin annotations, ink stains. Fabric bookmarks (brown/green/purple).</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/02_diario_personaggi.svg" alt="Manuscript - Characters" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>02 — Characters</h3>
-                <p>Left: large Canus portrait with handwritten description. Right: rough sketches of Jaad, Merchant, mysterious figure.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/03_diario_luoghi.svg" alt="Manuscript - Places" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>03 — Places</h3>
-                <p>Hand-drawn map with irregular paths, dashed streets. Location symbols: ✓ visited, ! current, ? to explore. Compass rose.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/04_diario_indizi.svg" alt="Manuscript - Clues" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>04 — Clues</h3>
-                <p>Left: 3 key clues with sketches (Cephalopod statuette, Scroll, Arcane symbol). Right: connection diagram (Father → Statuette → Machine/Yog-Sothoth?).</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/05_pulsante_diario_stati.svg" alt="Manuscript - Button States" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>05 — Button States</h3>
-                <p>4 states: Normal, Hover, New annotation, Pressed. Quill pen as notification indicator. Variants: red seal, ribbons, glow.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/06_transizione_apertura.svg" alt="Manuscript - Opening" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>06 — Opening Animation</h3>
-                <p>4-frame timeline (600ms): Closed → Cover lifts → Semi-open → Fully open. Timing markers, ease-out easing, page rustle sound.</p>
-                <span class="tag">Animation Spec</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/07_capitoli_navigazione.svg" alt="Manuscript - Chapters" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>07 — Chapter Index</h3>
-                <p>Left: chapter list (I-II completed, III current in red, IV-V locked). Right: Chapter III preview with mini-map, progress, "Read chapter" button.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/flusso-v2/08_FLUSSO_COMPLETO.svg" alt="Manuscript - Complete Flow" loading="lazy">
-            </div>
-            <div class="card-info">
-                <h3>08 — Complete Flow Map</h3>
-                <p>Full flow: Gameplay → Button states → Opening → Story → Sections → Chapter index → Closing. Design principles: no modern elements, handwritten, physical navigation.</p>
-                <span class="tag">Flow Diagram</span>
-            </div>
+    <!-- MAPPA FLUSSO GRANDE -->
+    <div class="flowmap" onclick="openOverlay(this)">
+        <img src="svg/flusso-v2/08_FLUSSO_COMPLETO.svg" alt="Mappa Flusso Completo v2" loading="lazy">
+        <div class="flowmap-caption">
+            <h3>Mappa Flusso Completo</h3>
+            <p>Gameplay &rarr; Pulsante &rarr; Apertura &rarr; Storia &rarr; Sezioni &rarr; Indice capitoli &rarr; Chiusura. Clicca per ingrandire.</p>
         </div>
     </div>
-</section>
-
-<div class="section-sep"><div class="ornament">&#10038; &#10038; &#10038;</div></div>
-
-<!-- BACKLOG -->
-<section id="backlog">
-    <h2>Backlog — Discarded Proposals</h2>
-    <p class="section-desc">Alternative visual directions explored during the design phase. Not selected for production.</p>
 
     <div class="card-grid grid-2">
-        <div class="card" style="opacity:0.7">
+        <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/02_diario_papiro_rotolo.svg" alt="Papiro Rotolo" loading="lazy">
+                <img src="svg/flusso-v2/01_diario_aperto_storia.svg" alt="Manoscritto — Storia" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Papyrus Scroll</h3>
-                <p>Ancient Oman-inspired. Three-column layout with decorated wooden rods. Horizontal section tabs with progression dots.</p>
-                <span class="tag" style="border-color:#555;color:#888">Discarded</span>
+                <h3>01 — Storia</h3>
+                <p>Stile manoscritto antico (500 a.C.). Testo scritto a mano, annotazioni a margine, macchie d'inchiostro. Segnalibri di stoffa.</p>
             </div>
         </div>
 
-        <div class="card" style="opacity:0.7">
+        <div class="card">
             <div class="card-img" onclick="openOverlay(this)">
-                <img src="svg/proposte/03_diario_codex_arcano.svg" alt="Codex Arcano" loading="lazy">
+                <img src="svg/flusso-v2/02_diario_personaggi.svg" alt="Manoscritto — Personaggi" loading="lazy">
             </div>
             <div class="card-info">
-                <h3>Arcane Codex</h3>
-                <p>Lovecraftian cosmic style. Sidebar with chapter list, eldritch symbols. Purple/blue palette with star decorations.</p>
-                <span class="tag" style="border-color:#555;color:#888">Discarded</span>
+                <h3>02 — Personaggi</h3>
+                <p>Sinistra: ritratto grande Canus con descrizione scritta a mano. Destra: schizzi abbozzati di Jaad, Mercante, figura misteriosa.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/flusso-v2/03_diario_luoghi.svg" alt="Manoscritto — Luoghi" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>03 — Luoghi</h3>
+                <p>Mappa disegnata a mano con percorsi irregolari. Simboli: &#10003; visitato, ! attuale, ? da esplorare. Rosa dei venti.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/flusso-v2/04_diario_indizi.svg" alt="Manoscritto — Indizi" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>04 — Indizi</h3>
+                <p>Sinistra: 3 indizi con schizzi (Statuetta, Pergamena, Simbolo arcano). Destra: diagramma collegamenti (Padre &rarr; Statuetta &rarr; Macchina/Yog-Sothoth?).</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/flusso-v2/05_pulsante_diario_stati.svg" alt="Manoscritto — Stati Pulsante" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>05 — Stati Pulsante</h3>
+                <p>4 stati: Normale, Hover, Nuova annotazione, Premuto. Piuma d'oca come indicatore notifica.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/flusso-v2/06_transizione_apertura.svg" alt="Manoscritto — Apertura" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>06 — Animazione Apertura</h3>
+                <p>Timeline 4 frame (600ms): Chiuso &rarr; Copertina si solleva &rarr; Semi-aperto &rarr; Aperto. Easing ease-out, suono fruscio.</p>
+                <span class="tag">Spec Animazione</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" onclick="openOverlay(this)">
+                <img src="svg/flusso-v2/07_capitoli_navigazione.svg" alt="Manoscritto — Capitoli" loading="lazy">
+            </div>
+            <div class="card-info">
+                <h3>07 — Indice Capitoli</h3>
+                <p>Sinistra: lista capitoli (I-II completati, III attuale in rosso, IV-V bloccati). Destra: anteprima Capitolo III con mini-mappa e progresso.</p>
             </div>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>Chronicle of Innsmouth: Curse of Chaos — Diary UI Design by <a href="https://github.com/GianpaoloGreco">PsychoDev / Addictive Health</a></p>
+    <p>Chronicle of Innsmouth: Curse of Chaos — Diary UI Design</p>
 </footer>
 
 <!-- OVERLAY -->
@@ -613,8 +584,9 @@
 <script>
     function openOverlay(el) {
         const img = el.querySelector('img');
-        const card = el.closest('.card');
-        const title = card.querySelector('h3')?.textContent || '';
+        const h3 = el.querySelector('h3');
+        const card = el.closest('.card') || el.closest('.flowmap');
+        const title = (card && card.querySelector('h3'))?.textContent || '';
         document.getElementById('overlay-img').src = img.src;
         document.getElementById('overlay-caption').textContent = title;
         document.getElementById('overlay').classList.add('active');
@@ -628,7 +600,6 @@
         if (e.key === 'Escape') closeOverlay();
     });
 
-    // Active nav highlighting
     const sections = document.querySelectorAll('section, .hero');
     const navLinks = document.querySelectorAll('nav a');
     window.addEventListener('scroll', () => {
